@@ -11,7 +11,8 @@
 
 @implementation ArtistDetailViewController
 
-@synthesize artistDetail, artistID, parser,artistName, artistDetailCache,artistScheduleTableView,schedules;
+@synthesize artistDetail, artistID, parser,artistName, artistDetailCache,artistScheduleTableView,schedules,indicator,uiView;
+
 
 - (SBJsonParser*) jsonParser {
     if(!parser){ 
@@ -54,24 +55,52 @@
     return schedules;
 }
 
+- (void) loadDataWithOperation {
+    [self artistDetails];
+    [self fetchSchedules];    
+    [self performSelectorOnMainThread:@selector(artistDetailTask) withObject:nil waitUntilDone:YES];
+}
+
+- (void) artistDetailTask{
+    self.artistDetail.text = [self artistDetails];
+    CGRect frame = self.artistDetail.frame;
+    frame.size.height = self.artistDetail.contentSize.height + 28;
+    artistDetail.frame = frame;    
+    
+    [artistScheduleTableView removeFromSuperview];
+    
+    artistScheduleTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, frame.size.height+12.0, 314.0, schedules.count * 141.0)];
+    [artistScheduleTableView setBackgroundColor:UIColorFromRGB(0xCCFFCC)];
+    artistScheduleTableView.separatorColor = [UIColor whiteColor];
+    artistScheduleTableView.dataSource=self;
+    artistScheduleTableView.delegate=self;
+    [artistScheduleTableView reloadData];
+    [indicator stopAnimating];
+    self.view = self.uiView;
+    [indicator removeFromSuperview];
+    [self.view addSubview:artistScheduleTableView];
+}
+
+- (void) loadData {
+    NSOperationQueue *queue = [NSOperationQueue new];
+    NSInvocationOperation *operation = [[NSInvocationOperation alloc] 
+                                        initWithTarget:self
+                                        selector:@selector(loadDataWithOperation)
+                                        object:nil];
+    [queue addOperation:operation];
+}
+
+
 - (void) setArtistID:(NSString *) newArtistID {
     if(artistID != newArtistID) {
         artistID = [newArtistID copy];
-        self.artistDetail.text = [self artistDetails];
-        CGRect frame = self.artistDetail.frame;
-        frame.size.height = self.artistDetail.contentSize.height + 28;
-        self.artistDetail.frame = frame;
-        
-        [artistScheduleTableView removeFromSuperview];
-        [self fetchSchedules];
-        
-        artistScheduleTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, frame.size.height+12.0, self.view.frame.size.width - 6.0, schedules.count * 141.0)];
-        [artistScheduleTableView setBackgroundColor:UIColorFromRGB(0xCCFFCC)];
-        artistScheduleTableView.separatorColor = [UIColor whiteColor];
-        [self.view addSubview:artistScheduleTableView];
-        artistScheduleTableView.dataSource=self;
-        artistScheduleTableView.delegate=self;
-        [artistScheduleTableView reloadData];
+        CGRect progressFrame = CGRectMake(50, 50, 75.0, 75.0);
+        indicator = [[UIActivityIndicatorView alloc] initWithFrame:progressFrame];
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+        [indicator setHidesWhenStopped:YES];
+        self.view = indicator;
+        [indicator startAnimating];
+        [self loadData];
     }
 }
 

@@ -75,14 +75,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Title" textAlignment="center" id="qgg-Ej-YkE">
-                                <rect key="frame" x="0.0" y="1" width="320" height="46"/>
+                                <rect key="frame" x="0.0" y="1" width="320" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80000000000000004" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Artist Details Text" id="ZBq-rD-z9s">
-                                <rect key="frame" x="0.0" y="48" width="320" height="184"/>
+                                <rect key="frame" x="0.0" y="41" width="320" height="191"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.80000000000000004" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="13"/>
@@ -99,6 +99,7 @@
                     <connections>
                         <outlet property="artistDetail" destination="ZBq-rD-z9s" id="F8u-Fa-mhL"/>
                         <outlet property="artistName" destination="qgg-Ej-YkE" id="vWF-L4-BGK"/>
+                        <outlet property="uiView" destination="8oq-rx-XPG" id="ywj-X1-u88"/>
                     </connections>
                 </viewController>
             </objects>
@@ -320,6 +321,7 @@
             <relationships>
                 <relationship kind="outlet" name="artistDetail" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="artistName" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="uiView" candidateClass="UIView"/>
             </relationships>
         </class>
         <class className="ArtistListViewController" superclassName="UITableViewController">
