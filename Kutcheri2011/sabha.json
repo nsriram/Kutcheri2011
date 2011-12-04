@@ -1,0 +1,27 @@
+{
+    "status": "ok",
+    "count": 3,
+    "sabhas": [
+               {
+               "id": 317,
+               "slug": "bharath-kalachar",
+               "title": "Bharath Kalachar",
+               "description": "Bharath Kalachar is a sabha",
+               "post_count": 1
+               },
+               {
+               "id": 319,
+               "slug": "hamsadhwani",
+               "title": "Hamsadhwani",
+               "description": "Hamsadhwani is a sabha",
+               "post_count": 1
+               },
+               {
+               "id": 325,
+               "slug": "music-academy",
+               "title": "The Music Academy",
+               "description": "The Music Academy is a sabha",
+               "post_count": 84
+               }
+               ]
+}
