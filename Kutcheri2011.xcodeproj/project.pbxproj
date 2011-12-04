@@ -37,6 +37,11 @@
 		C391B5A31482CB5700F8E02A /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = C391B5951482CB5700F8E02A /* SBJsonTokeniser.m */; };
 		C391B5A41482CB5700F8E02A /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = C391B5971482CB5700F8E02A /* SBJsonUTF8Stream.m */; };
 		C391B5A51482CB5700F8E02A /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = C391B5991482CB5700F8E02A /* SBJsonWriter.m */; };
+		C3B0FE79148C037300BBA20D /* artiste.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0FE75148C037300BBA20D /* artiste.png */; };
+		C3B0FE7B148C037300BBA20D /* instrument.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0FE77148C037300BBA20D /* instrument.png */; };
+		C3B0FE7C148C037300BBA20D /* sabha.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0FE78148C037300BBA20D /* sabha.png */; };
+		C3B0FE7E148C044C00BBA20D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0FE7D148C044C00BBA20D /* icon.png */; };
+		C3B0FE80148C05DB00BBA20D /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0FE7F148C05DB00BBA20D /* home.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +99,11 @@
 		C391B5971482CB5700F8E02A /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		C391B5981482CB5700F8E02A /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		C391B5991482CB5700F8E02A /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		C3B0FE75148C037300BBA20D /* artiste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = artiste.png; sourceTree = "<group>"; };
+		C3B0FE77148C037300BBA20D /* instrument.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instrument.png; sourceTree = "<group>"; };
+		C3B0FE78148C037300BBA20D /* sabha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sabha.png; sourceTree = "<group>"; };
+		C3B0FE7D148C044C00BBA20D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		C3B0FE7F148C05DB00BBA20D /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +150,11 @@
 		C3276BD314829E830039954A /* Kutcheri2011 */ = {
 			isa = PBXGroup;
 			children = (
+				C3B0FE7F148C05DB00BBA20D /* home.png */,
+				C3B0FE7D148C044C00BBA20D /* icon.png */,
+				C3B0FE75148C037300BBA20D /* artiste.png */,
+				C3B0FE77148C037300BBA20D /* instrument.png */,
+				C3B0FE78148C037300BBA20D /* sabha.png */,
 				C34C17C614841DC1000A6744 /* json-framework */,
 				C3276BD414829E830039954A /* Supporting Files */,
 				C34C17CC1484D23A000A6744 /* SabhaListViewController.h */,
@@ -267,6 +282,11 @@
 				C36890D0148B7BB900633EF8 /* ScheduleView.xib in Resources */,
 				C30A725F148BA0AC001F6778 /* sabha.json in Resources */,
 				C3354AAA148BC3D40004036C /* artist.json in Resources */,
+				C3B0FE79148C037300BBA20D /* artiste.png in Resources */,
+				C3B0FE7B148C037300BBA20D /* instrument.png in Resources */,
+				C3B0FE7C148C037300BBA20D /* sabha.png in Resources */,
+				C3B0FE7E148C044C00BBA20D /* icon.png in Resources */,
+				C3B0FE80148C05DB00BBA20D /* home.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biV-qd-epC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="CYd-2T-usE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Artist" id="cWE-TJ-xm9"/>
+                    <tabBarItem key="tabBarItem" title="Artist" image="artiste.png" id="cWE-TJ-xm9"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3gf-sp-XBQ">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.59999999999999998" green="0.20000000000000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -109,7 +109,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6LN-6v-mA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="7RG-yc-5md" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Instrument" id="OFX-sT-vr7"/>
+                    <tabBarItem key="tabBarItem" title="Instrument" image="instrument.png" id="OFX-sT-vr7"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="tMn-et-ijU">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.59999999999999998" green="0.20000000000000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -170,7 +170,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78l-jI-Sy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="G2r-fq-zzo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sabha" id="hAX-zp-ljD"/>
+                    <tabBarItem key="tabBarItem" title="Sabha" image="sabha.png" id="hAX-zp-ljD"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="OIL-6z-OW1">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.59999999999999998" green="0.20000000000000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -231,7 +231,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3dO-Lv-LTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="r4f-hD-89H" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Season" id="pda-LM-A5l"/>
+                    <tabBarItem key="tabBarItem" title="Season" image="home.png" id="pda-LM-A5l"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="gYg-zJ-6Zs">
                         <autoresizingMask key="autoresizingMask"/>
@@ -294,15 +294,11 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
                 <tabBarController id="4" sceneMemberID="viewController">
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.59999999999999998" green="0.20000000000000001" blue="0.0" alpha="0.83999999999999997" colorSpace="calibratedRGB"/>
-                        <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="r4f-hD-89H" kind="relationship" relationship="viewControllers" id="pBE-wr-NoT"/>
@@ -315,6 +311,12 @@
             <point key="canvasLocation" x="132" y="112"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="artiste.png" width="21" height="21"/>
+        <image name="home.png" width="21" height="21"/>
+        <image name="instrument.png" width="21" height="21"/>
+        <image name="sabha.png" width="21" height="21"/>
+    </resources>
     <classes>
         <class className="ArtistDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ArtistDetailViewController.h"/>
