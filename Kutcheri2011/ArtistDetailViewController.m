@@ -7,12 +7,9 @@
 @property (nonatomic,retain) NSArray *schedules;
 @end                                    
 
-#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
-
 @implementation ArtistDetailViewController
 
 @synthesize artistDetail, artistID, parser,artistName, artistDetailCache,artistScheduleTableView,schedules,indicator,uiView;
-
 
 - (SBJsonParser*) jsonParser {
     if(!parser){ 
@@ -69,8 +66,7 @@
     
     [artistScheduleTableView removeFromSuperview];
     
-    artistScheduleTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, frame.size.height+12.0, 314.0, schedules.count * 141.0)];
-    [artistScheduleTableView setBackgroundColor:UIColorFromRGB(0xCCFFCC)];
+    artistScheduleTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, frame.size.height+8.0, 314.0, schedules.count * 141.0)];
     artistScheduleTableView.separatorColor = [UIColor whiteColor];
     artistScheduleTableView.dataSource=self;
     artistScheduleTableView.delegate=self;

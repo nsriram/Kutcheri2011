@@ -12,7 +12,7 @@
 - (void) loadDataWithOperation {
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.separatorColor = [UIColor whiteColor];
+    self.tableView.separatorColor = [UIColor blackColor];
     [self.tableView reloadData];
 }
 

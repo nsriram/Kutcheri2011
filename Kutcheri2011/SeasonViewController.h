@@ -1,9 +1,6 @@
 #import <UIKit/UIKit.h>
 
-@interface SeasonViewController : UIViewController <UIWebViewDelegate>{
-    UIWebView *webView;
-    UIActivityIndicatorView *indicator;
+@interface SeasonViewController : UIViewController{
+
 }
-@property (nonatomic, retain) UIWebView *webView;
-@property (nonatomic, retain) UIActivityIndicatorView *indicator;
 @end
