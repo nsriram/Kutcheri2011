@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C30A725F148BA0AC001F6778 /* sabha.json in Resources */ = {isa = PBXBuildFile; fileRef = C30A725E148BA0AC001F6778 /* sabha.json */; };
 		C30BCCF8148EAA2F008A0CFA /* ArtistShareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C30BCCF7148EAA2F008A0CFA /* ArtistShareAppDelegate.m */; };
+		C30BCCFC148EC127008A0CFA /* kutcheri2011.png in Resources */ = {isa = PBXBuildFile; fileRef = C30BCCFB148EC126008A0CFA /* kutcheri2011.png */; };
 		C3276BCE14829E830039954A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3276BCD14829E830039954A /* UIKit.framework */; };
 		C3276BD014829E830039954A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3276BCF14829E830039954A /* Foundation.framework */; };
 		C3276BD214829E830039954A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3276BD114829E830039954A /* CoreGraphics.framework */; };
@@ -56,6 +57,7 @@
 		C30A725E148BA0AC001F6778 /* sabha.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sabha.json; sourceTree = "<group>"; };
 		C30BCCF6148EAA2F008A0CFA /* ArtistShareAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistShareAppDelegate.h; sourceTree = "<group>"; };
 		C30BCCF7148EAA2F008A0CFA /* ArtistShareAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistShareAppDelegate.m; sourceTree = "<group>"; };
+		C30BCCFB148EC126008A0CFA /* kutcheri2011.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kutcheri2011.png; sourceTree = "<group>"; };
 		C3276BC914829E830039954A /* Kutcheri2011.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kutcheri2011.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3276BCD14829E830039954A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3276BCF14829E830039954A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -189,6 +191,7 @@
 		C3276BD314829E830039954A /* Kutcheri2011 */ = {
 			isa = PBXGroup;
 			children = (
+				C30BCCFB148EC126008A0CFA /* kutcheri2011.png */,
 				C39B4404148E78BA0049FBB1 /* like.png */,
 				C3B0FE85148C0A0600BBA20D /* trademark.png */,
 				C3B0FE7F148C05DB00BBA20D /* home.png */,
@@ -334,6 +337,7 @@
 				C3B0FE86148C0A0600BBA20D /* trademark.png in Resources */,
 				C39B4405148E78BA0049FBB1 /* like.png in Resources */,
 				C39B4412148E96AE0049FBB1 /* FBDialog.bundle in Resources */,
+				C30BCCFC148EC127008A0CFA /* kutcheri2011.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

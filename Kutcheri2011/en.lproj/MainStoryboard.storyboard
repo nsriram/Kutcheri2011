@@ -268,27 +268,16 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="372"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" editable="NO" id="ad9-ZC-oGQ">
-                                <rect key="frame" x="10" y="5" width="301" height="167"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <string key="text">The Chennai Music Season or the Madras Music Season, as the season was originally called is celebrated in a period of six to seven weeks spanning the months of December and January. This season usually witnesses a large number of small and large kutcheris around the city of Chennai.</string>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="trademark.png" id="F27-Gd-RM7">
                                 <rect key="frame" x="0.0" y="326" width="320" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="vDC-wk-1Pm">
-                                <rect key="frame" x="10" y="157" width="301" height="158"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="kutcheri2011.png" id="YeZ-Zm-1yg">
+                                <rect key="frame" x="14" y="40" width="293" height="259"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">At ILoveMadras, we celebrate Chennai. Here we bring to you some of the most useful and important information about the city and the season. We at ILoveMadras wish you enjoy the music season. Should you have any feedback, do write to us at machi (at) ilovemadras (dot) com.</string>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chennai Music Season" id="RqE-KD-LKP"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
@@ -353,6 +342,7 @@
         <image name="artiste.png" width="21" height="21"/>
         <image name="home.png" width="21" height="21"/>
         <image name="instrument.png" width="21" height="21"/>
+        <image name="kutcheri2011.png" width="290" height="250"/>
         <image name="like.png" width="40" height="34"/>
         <image name="sabha.png" width="21" height="21"/>
         <image name="trademark.png" width="295" height="57"/>
