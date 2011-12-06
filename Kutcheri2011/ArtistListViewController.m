@@ -128,8 +128,8 @@
     NSDictionary *artist = [self artistAtIndexPath:indexPath];
     NSString *artistID = (NSString *)[artist objectForKey:@"id"];
     [self.navigationController pushViewController:self.artistDetailViewController animated:YES];
-    self.artistDetailViewController.artistName.text =(NSString *)[artist objectForKey:@"title"];
     self.artistDetailViewController.artistID = artistID;
+    self.artistDetailViewController.artistName.text =(NSString *)[artist objectForKey:@"title"];
 }
 
 

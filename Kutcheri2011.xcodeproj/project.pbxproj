@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C30A725F148BA0AC001F6778 /* sabha.json in Resources */ = {isa = PBXBuildFile; fileRef = C30A725E148BA0AC001F6778 /* sabha.json */; };
+		C30BCCF8148EAA2F008A0CFA /* ArtistShareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C30BCCF7148EAA2F008A0CFA /* ArtistShareAppDelegate.m */; };
 		C3276BCE14829E830039954A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3276BCD14829E830039954A /* UIKit.framework */; };
 		C3276BD014829E830039954A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3276BCF14829E830039954A /* Foundation.framework */; };
 		C3276BD214829E830039954A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3276BD114829E830039954A /* CoreGraphics.framework */; };
@@ -37,6 +38,12 @@
 		C391B5A31482CB5700F8E02A /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = C391B5951482CB5700F8E02A /* SBJsonTokeniser.m */; };
 		C391B5A41482CB5700F8E02A /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = C391B5971482CB5700F8E02A /* SBJsonUTF8Stream.m */; };
 		C391B5A51482CB5700F8E02A /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = C391B5991482CB5700F8E02A /* SBJsonWriter.m */; };
+		C39B4405148E78BA0049FBB1 /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = C39B4404148E78BA0049FBB1 /* like.png */; };
+		C39B4411148E96AE0049FBB1 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = C39B4408148E96AE0049FBB1 /* Facebook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C39B4412148E96AE0049FBB1 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C39B440A148E96AE0049FBB1 /* FBDialog.bundle */; };
+		C39B4413148E96AE0049FBB1 /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C39B440C148E96AE0049FBB1 /* FBDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C39B4414148E96AE0049FBB1 /* FBLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C39B440E148E96AE0049FBB1 /* FBLoginDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C39B4415148E96AE0049FBB1 /* FBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C39B4410148E96AE0049FBB1 /* FBRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C3B0FE79148C037300BBA20D /* artiste.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0FE75148C037300BBA20D /* artiste.png */; };
 		C3B0FE7B148C037300BBA20D /* instrument.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0FE77148C037300BBA20D /* instrument.png */; };
 		C3B0FE7C148C037300BBA20D /* sabha.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0FE78148C037300BBA20D /* sabha.png */; };
@@ -47,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		C30A725E148BA0AC001F6778 /* sabha.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sabha.json; sourceTree = "<group>"; };
+		C30BCCF6148EAA2F008A0CFA /* ArtistShareAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistShareAppDelegate.h; sourceTree = "<group>"; };
+		C30BCCF7148EAA2F008A0CFA /* ArtistShareAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistShareAppDelegate.m; sourceTree = "<group>"; };
 		C3276BC914829E830039954A /* Kutcheri2011.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kutcheri2011.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3276BCD14829E830039954A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3276BCF14829E830039954A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,6 +109,17 @@
 		C391B5971482CB5700F8E02A /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		C391B5981482CB5700F8E02A /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		C391B5991482CB5700F8E02A /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		C39B4404148E78BA0049FBB1 /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
+		C39B4407148E96AE0049FBB1 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
+		C39B4408148E96AE0049FBB1 /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
+		C39B4409148E96AE0049FBB1 /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
+		C39B440A148E96AE0049FBB1 /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBDialog.bundle; sourceTree = "<group>"; };
+		C39B440B148E96AE0049FBB1 /* FBDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDialog.h; sourceTree = "<group>"; };
+		C39B440C148E96AE0049FBB1 /* FBDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDialog.m; sourceTree = "<group>"; };
+		C39B440D148E96AE0049FBB1 /* FBLoginDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginDialog.h; sourceTree = "<group>"; };
+		C39B440E148E96AE0049FBB1 /* FBLoginDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginDialog.m; sourceTree = "<group>"; };
+		C39B440F148E96AE0049FBB1 /* FBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRequest.h; sourceTree = "<group>"; };
+		C39B4410148E96AE0049FBB1 /* FBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBRequest.m; sourceTree = "<group>"; };
 		C3B0FE75148C037300BBA20D /* artiste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = artiste.png; sourceTree = "<group>"; };
 		C3B0FE77148C037300BBA20D /* instrument.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instrument.png; sourceTree = "<group>"; };
 		C3B0FE78148C037300BBA20D /* sabha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sabha.png; sourceTree = "<group>"; };
@@ -122,6 +142,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C317C77E148E9AA400C38537 /* facebook */ = {
+			isa = PBXGroup;
+			children = (
+				C39B4408148E96AE0049FBB1 /* Facebook.m */,
+				C39B4409148E96AE0049FBB1 /* FBConnect.h */,
+				C39B4407148E96AE0049FBB1 /* Facebook.h */,
+				C39B440B148E96AE0049FBB1 /* FBDialog.h */,
+				C39B440C148E96AE0049FBB1 /* FBDialog.m */,
+				C39B440E148E96AE0049FBB1 /* FBLoginDialog.m */,
+				C39B440F148E96AE0049FBB1 /* FBRequest.h */,
+				C39B4410148E96AE0049FBB1 /* FBRequest.m */,
+				C39B440A148E96AE0049FBB1 /* FBDialog.bundle */,
+				C39B440D148E96AE0049FBB1 /* FBLoginDialog.h */,
+			);
+			name = facebook;
+			sourceTree = "<group>";
+		};
 		C3276BBE14829E830039954A = {
 			isa = PBXGroup;
 			children = (
@@ -152,12 +189,14 @@
 		C3276BD314829E830039954A /* Kutcheri2011 */ = {
 			isa = PBXGroup;
 			children = (
+				C39B4404148E78BA0049FBB1 /* like.png */,
 				C3B0FE85148C0A0600BBA20D /* trademark.png */,
 				C3B0FE7F148C05DB00BBA20D /* home.png */,
 				C3B0FE7D148C044C00BBA20D /* icon.png */,
 				C3B0FE75148C037300BBA20D /* artiste.png */,
 				C3B0FE77148C037300BBA20D /* instrument.png */,
 				C3B0FE78148C037300BBA20D /* sabha.png */,
+				C317C77E148E9AA400C38537 /* facebook */,
 				C34C17C614841DC1000A6744 /* json-framework */,
 				C3276BD414829E830039954A /* Supporting Files */,
 				C34C17CC1484D23A000A6744 /* SabhaListViewController.h */,
@@ -178,6 +217,8 @@
 				C36890CF148B7BB900633EF8 /* ScheduleView.xib */,
 				C33D6D31148684B200B817AA /* SeasonViewController.h */,
 				C33D6D32148684B200B817AA /* SeasonViewController.m */,
+				C30BCCF6148EAA2F008A0CFA /* ArtistShareAppDelegate.h */,
+				C30BCCF7148EAA2F008A0CFA /* ArtistShareAppDelegate.m */,
 			);
 			path = Kutcheri2011;
 			sourceTree = "<group>";
@@ -291,6 +332,8 @@
 				C3B0FE7E148C044C00BBA20D /* icon.png in Resources */,
 				C3B0FE80148C05DB00BBA20D /* home.png in Resources */,
 				C3B0FE86148C0A0600BBA20D /* trademark.png in Resources */,
+				C39B4405148E78BA0049FBB1 /* like.png in Resources */,
+				C39B4412148E96AE0049FBB1 /* FBDialog.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +365,11 @@
 				C33D6D33148684B200B817AA /* SeasonViewController.m in Sources */,
 				C348710C148AB80000B6E856 /* ScheduleListViewController.m in Sources */,
 				C36890CD148B790700633EF8 /* ScheduleCell.m in Sources */,
+				C39B4411148E96AE0049FBB1 /* Facebook.m in Sources */,
+				C39B4413148E96AE0049FBB1 /* FBDialog.m in Sources */,
+				C39B4414148E96AE0049FBB1 /* FBLoginDialog.m in Sources */,
+				C39B4415148E96AE0049FBB1 /* FBRequest.m in Sources */,
+				C30BCCF8148EAA2F008A0CFA /* ArtistShareAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +446,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kutcheri2011/Kutcheri2011-Prefix.pch";
 				INFOPLIST_FILE = "Kutcheri2011/Kutcheri2011-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = Kutcheri2011;
 				WRAPPER_EXTENSION = app;
 			};
@@ -409,6 +458,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kutcheri2011/Kutcheri2011-Prefix.pch";
 				INFOPLIST_FILE = "Kutcheri2011/Kutcheri2011-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = Kutcheri2011;
 				WRAPPER_EXTENSION = app;
 			};

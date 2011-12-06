@@ -1,6 +1,8 @@
 #import "ArtistDetailViewController.h"
 #import "SBJson.h"
 #import "ScheduleCell.h"
+#import "ArtistShareAppDelegate.h"
+#import "SBJson.h"
 
 @interface ArtistDetailViewController()
 @property (retain) SBJsonParser *parser;
@@ -9,7 +11,14 @@
 
 @implementation ArtistDetailViewController
 
-@synthesize artistDetail, artistID, parser,artistName, artistDetailCache,artistScheduleTableView,schedules,indicator,uiView;
+@synthesize artistDetail, artistID, artistProfileURL, artistName, artistDetailCache, parser, artistScheduleTableView,schedules,indicator,uiView,artistShareAppDelegate;
+
+-(ArtistShareAppDelegate*) artistShareAppDelegate{
+    if(!artistShareAppDelegate){
+        artistShareAppDelegate = [[ArtistShareAppDelegate alloc]init];
+    }
+    return artistShareAppDelegate;
+}
 
 - (SBJsonParser*) jsonParser {
     if(!parser){ 
@@ -31,6 +40,8 @@
     NSString *contents  = [self urlContents:baseURL];
     NSDictionary *jsonData = (NSDictionary*)[[self jsonParser] objectWithString:contents error:nil];
     NSDictionary *postData = [jsonData objectForKey:@"post"];
+    self.artistProfileURL = [postData objectForKey:@"url"];
+    NSLog(@"self.artistProfileURL=%@",self.artistProfileURL);
     return  [postData objectForKey:@"excerpt"];
 }
 
@@ -161,6 +172,11 @@
     cell.what.text = (NSString *)[scheduleAtIndex objectForKey:@"what"];
     return cell;
 }
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+}
+
+-(IBAction)shareOnFB {
+    [self.artistShareAppDelegate shareOnFB:self.artistName.text profileURL:self.artistProfileURL];
+}
+
 @end
