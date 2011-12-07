@@ -3,14 +3,14 @@
 #import "ArtistDetailViewController.h"
 
 @interface ArtistListViewController()
-@property (nonatomic, retain) NSArray *artistes;
-@property (nonatomic, retain) NSString *section;
+@property (nonatomic, retain) NSMutableDictionary *artistes;
+@property (nonatomic, retain) NSArray *sections;
 @property (nonatomic,retain) ArtistDetailViewController *artistDetailViewController;
 @end                                    
 
 @implementation ArtistListViewController
 
-@synthesize artistes,section,artistDetailViewController;
+@synthesize artistes,sections,artistDetailViewController;
 
 -(NSString *)fetchArtistesData {
     NSString *artistJSON = @"";
@@ -21,25 +21,26 @@
     return artistJSON;
 }
 
--(NSArray *) parseArtistesJSON:(NSString *) artistesJSON {
+-(NSMutableDictionary *) parseArtistesJSON:(NSString *) artistesJSON {
     SBJsonParser *parser = [[SBJsonParser alloc] init];
     NSDictionary *jsonData = (NSDictionary*)[parser objectWithString:artistesJSON error:nil];    
     return [jsonData objectForKey:@"artistes"];
 }
 
--(NSArray*) artistes {
+-(NSMutableDictionary*) artistes {
     if(!artistes){
         NSString *artistesJSON = [self fetchArtistesData];
-        self.artistes = [self parseArtistesJSON:artistesJSON];
+        artistes = [self parseArtistesJSON:artistesJSON];
+        NSLog(@"%d",artistes.count);
     }
     return artistes;
 }
 
--(NSString*) section {
-    if(!section) {
-        self.section = @"Artistes";
+-(NSArray*) sections {
+    if(!sections) {
+        sections = [[self.artistes allKeys] sortedArrayUsingSelector:@selector(compare:)];
     }
-    return self.section;
+    return sections;
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,17 +79,18 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return self.sections.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.artistes.count;
+    NSArray *artistesInSection = [self.artistes objectForKey:[self.sections objectAtIndex:section]];
+    return artistesInSection.count;                                                              
 }
 
 - (NSDictionary *) artistAtIndexPath:(NSIndexPath*) indexPath{
-    NSDictionary *artistAtIndex = [self.artistes objectAtIndex:indexPath.row];
-    return artistAtIndex;
+    NSArray *artistesInSection = [self.artistes objectForKey:[self.sections objectAtIndex:indexPath.section]];    
+    return [artistesInSection objectAtIndex:indexPath.row];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -105,6 +107,10 @@
     cell.detailTextLabel.text = (NSString *)[artist objectForKey:@"description"];        
     
     return cell;
+}
+
+-(NSString*) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return [self.sections objectAtIndex:section];
 }
 
 -(ArtistDetailViewController *) artistDetailViewController {
