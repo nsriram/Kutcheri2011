@@ -36,6 +36,7 @@
 		C3276BDE14829E830039954A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3276BDD14829E830039954A /* AppDelegate.m */; };
 		C3276BE114829E830039954A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3276BDF14829E830039954A /* MainStoryboard.storyboard */; };
 		C3354AAA148BC3D40004036C /* artist.json in Resources */ = {isa = PBXBuildFile; fileRef = C3354AA9148BC3D40004036C /* artist.json */; };
+		C339227F148F8E870094F9E7 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C339227E148F8E870094F9E7 /* EventKit.framework */; };
 		C33D6D33148684B200B817AA /* SeasonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33D6D32148684B200B817AA /* SeasonViewController.m */; };
 		C348710C148AB80000B6E856 /* ScheduleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C348710B148AB80000B6E856 /* ScheduleListViewController.m */; };
 		C34C17CB14842089000A6744 /* InstrumentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34C17CA14842089000A6744 /* InstrumentListViewController.m */; };
@@ -106,6 +107,7 @@
 		C3276BDD14829E830039954A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C3276BE014829E830039954A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C3354AA9148BC3D40004036C /* artist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = artist.json; sourceTree = "<group>"; };
+		C339227E148F8E870094F9E7 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		C33D6D31148684B200B817AA /* SeasonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeasonViewController.h; sourceTree = "<group>"; };
 		C33D6D32148684B200B817AA /* SeasonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeasonViewController.m; sourceTree = "<group>"; };
 		C348710A148AB7FF00B6E856 /* ScheduleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleListViewController.h; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C339227F148F8E870094F9E7 /* EventKit.framework in Frameworks */,
 				C3276BCE14829E830039954A /* UIKit.framework in Frameworks */,
 				C3276BD014829E830039954A /* Foundation.framework in Frameworks */,
 				C3276BD214829E830039954A /* CoreGraphics.framework in Frameworks */,
@@ -241,6 +244,7 @@
 		C3276BCC14829E830039954A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C339227E148F8E870094F9E7 /* EventKit.framework */,
 				C3276BCD14829E830039954A /* UIKit.framework */,
 				C3276BCF14829E830039954A /* Foundation.framework */,
 				C3276BD114829E830039954A /* CoreGraphics.framework */,
@@ -251,39 +255,32 @@
 		C3276BD314829E830039954A /* Kutcheri2011 */ = {
 			isa = PBXGroup;
 			children = (
-				C30BCD5C148F6646008A0CFA /* instruments */,
-				C30BCD38148F5394008A0CFA /* home_icon.jpg */,
-				C30BCD36148F5158008A0CFA /* calendar1-add.png */,
-				C39B4404148E78BA0049FBB1 /* like.png */,
-				C3B0FE85148C0A0600BBA20D /* trademark.png */,
-				C3B0FE7F148C05DB00BBA20D /* home.png */,
 				C3B0FE7D148C044C00BBA20D /* icon.png */,
-				C3B0FE75148C037300BBA20D /* artiste.png */,
-				C3B0FE77148C037300BBA20D /* instrument.png */,
-				C3B0FE78148C037300BBA20D /* sabha.png */,
+				C339227C148F7BBF0094F9E7 /* appicons */,
+				C30BCD5C148F6646008A0CFA /* instruments */,
 				C317C77E148E9AA400C38537 /* facebook */,
 				C34C17C614841DC1000A6744 /* json-framework */,
 				C3276BD414829E830039954A /* Supporting Files */,
-				C34C17CC1484D23A000A6744 /* SabhaListViewController.h */,
+				C3276BDC14829E830039954A /* AppDelegate.h */,
+				C3276BDD14829E830039954A /* AppDelegate.m */,
 				C36890CB148B790700633EF8 /* ScheduleCell.h */,
 				C36890CC148B790700633EF8 /* ScheduleCell.m */,
+				C391B57D1482CAC600F8E02A /* ArtistListViewController.h */,
+				C391B57E1482CAC600F8E02A /* ArtistListViewController.m */,
+				C34C17C914842089000A6744 /* InstrumentListViewController.h */,
+				C34C17CA14842089000A6744 /* InstrumentListViewController.m */,
+				C34C17CC1484D23A000A6744 /* SabhaListViewController.h */,
 				C34C17CD1484D23A000A6744 /* SabhaListViewController.m */,
 				C372A2F014854EAE00F136E5 /* ArtistDetailViewController.h */,
 				C372A2F114854EAE00F136E5 /* ArtistDetailViewController.m */,
 				C348710A148AB7FF00B6E856 /* ScheduleListViewController.h */,
 				C348710B148AB80000B6E856 /* ScheduleListViewController.m */,
-				C34C17C914842089000A6744 /* InstrumentListViewController.h */,
-				C34C17CA14842089000A6744 /* InstrumentListViewController.m */,
-				C391B57D1482CAC600F8E02A /* ArtistListViewController.h */,
-				C391B57E1482CAC600F8E02A /* ArtistListViewController.m */,
-				C3276BDC14829E830039954A /* AppDelegate.h */,
-				C3276BDD14829E830039954A /* AppDelegate.m */,
-				C3276BDF14829E830039954A /* MainStoryboard.storyboard */,
-				C36890CF148B7BB900633EF8 /* ScheduleView.xib */,
 				C33D6D31148684B200B817AA /* SeasonViewController.h */,
 				C33D6D32148684B200B817AA /* SeasonViewController.m */,
 				C30BCCF6148EAA2F008A0CFA /* ArtistShareAppDelegate.h */,
 				C30BCCF7148EAA2F008A0CFA /* ArtistShareAppDelegate.m */,
+				C3276BDF14829E830039954A /* MainStoryboard.storyboard */,
+				C36890CF148B7BB900633EF8 /* ScheduleView.xib */,
 			);
 			path = Kutcheri2011;
 			sourceTree = "<group>";
@@ -300,6 +297,21 @@
 				C3354AA9148BC3D40004036C /* artist.json */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C339227C148F7BBF0094F9E7 /* appicons */ = {
+			isa = PBXGroup;
+			children = (
+				C30BCD38148F5394008A0CFA /* home_icon.jpg */,
+				C3B0FE7F148C05DB00BBA20D /* home.png */,
+				C3B0FE85148C0A0600BBA20D /* trademark.png */,
+				C3B0FE78148C037300BBA20D /* sabha.png */,
+				C3B0FE75148C037300BBA20D /* artiste.png */,
+				C3B0FE77148C037300BBA20D /* instrument.png */,
+				C39B4404148E78BA0049FBB1 /* like.png */,
+				C30BCD36148F5158008A0CFA /* calendar1-add.png */,
+			);
+			name = appicons;
 			sourceTree = "<group>";
 		};
 		C34C17C614841DC1000A6744 /* json-framework */ = {

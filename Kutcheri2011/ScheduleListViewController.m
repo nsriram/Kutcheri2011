@@ -34,7 +34,6 @@
 
 -(NSArray*) schedules{    
     if(!schedules){
-        NSLog(@"invoking URL");
         NSError *error;
         NSURL *url = [NSURL URLWithString:eventURL];    
         NSString *scheduleString = [NSString stringWithContentsOfURL:url 
@@ -48,6 +47,7 @@
 
 - (void) setEventURL:(NSString *) newEventURL {
     if(eventURL != newEventURL) {
+        NSLog(@"setting newevent url and starting progress");
         eventURL = [newEventURL copy];
         CGRect progressFrame = CGRectMake(50, 50, 75.0, 75.0);
         indicator = [[UIActivityIndicatorView alloc] initWithFrame:progressFrame];

@@ -16,4 +16,5 @@
 @property (nonatomic,retain) UILabel *when;
 @property (nonatomic,retain) UILabel *where;
 @property (nonatomic,retain) UILabel *what;
+-(IBAction)addSchedule :(UIButton *)sender;
 @end

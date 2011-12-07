@@ -30,14 +30,18 @@
 -(NSString *) urlContents:(NSString *)baseURL{
     NSError *error;
     NSURL *artistDetailURL = [NSURL URLWithString:[baseURL stringByAppendingFormat:@"%@",artistID]];    
-    return [NSString stringWithContentsOfURL:artistDetailURL 
-                                    encoding:NSASCIIStringEncoding
-                                       error:&error];
+    NSLog(@"fetching contents");
+    NSString *contents = [NSString stringWithContentsOfURL:artistDetailURL 
+                                                  encoding:NSASCIIStringEncoding
+                                                     error:&error];
+    NSLog(@"fetched contents");    
+    return contents;
 }
 
 -(NSString *) artistProfile {
     NSString *baseURL = @"http://www.ilovemadras.com/api/get_artiste_profile/?id=";
     NSString *contents  = [self urlContents:baseURL];
+    NSLog(@"fetched profile contents");
     NSDictionary *jsonData = (NSDictionary*)[[self jsonParser] objectWithString:contents error:nil];
     NSDictionary *postData = [jsonData objectForKey:@"post"];
     self.artistProfileURL = [postData objectForKey:@"url"];
@@ -57,6 +61,7 @@
 -(NSArray*) fetchSchedules{    
     NSString *baseURL = @"http://www.ilovemadras.com/api/get_events_by_artiste/?id=";
     NSString *scheduleString  = [self urlContents:baseURL];
+    NSLog(@"fetched schedules");
     NSDictionary *jsonData = (NSDictionary*)[[self jsonParser] objectWithString:scheduleString error:nil];
     schedules = [jsonData objectForKey:@"posts"];
     return schedules;
@@ -73,9 +78,7 @@
     CGRect frame = self.artistDetail.frame;
     frame.size.height = self.artistDetail.contentSize.height + 28;
     artistDetail.frame = frame;    
-    
     [artistScheduleTableView removeFromSuperview];
-    
     artistScheduleTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, frame.size.height+8.0, 314.0, schedules.count * 141.0)];
     artistScheduleTableView.separatorColor = [UIColor whiteColor];
     artistScheduleTableView.dataSource=self;
