@@ -122,6 +122,7 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    [artistDetailCache removeAllObjects];
 }
 
 #pragma mark - View lifecycle

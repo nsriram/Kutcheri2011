@@ -5,13 +5,12 @@
 @interface ArtistListViewController()
 @property (nonatomic, retain) NSArray *artistes;
 @property (nonatomic, retain) NSString *section;
-@property (nonatomic, retain)   SBJsonParser *parser;
 @property (nonatomic,retain) ArtistDetailViewController *artistDetailViewController;
 @end                                    
 
 @implementation ArtistListViewController
 
-@synthesize artistes,section,parser,artistDetailViewController;
+@synthesize artistes,section,artistDetailViewController;
 
 -(NSString *)fetchArtistesData {
     NSString *artistJSON = @"";
@@ -22,15 +21,9 @@
     return artistJSON;
 }
 
-- (SBJsonParser*) jsonParser {
-    if(!parser){ 
-        parser = [[SBJsonParser alloc] init];    
-    }
-    return parser;
-}
-
 -(NSArray *) parseArtistesJSON:(NSString *) artistesJSON {
-    NSDictionary *jsonData = (NSDictionary*)[[self jsonParser] objectWithString:artistesJSON error:nil];    
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    NSDictionary *jsonData = (NSDictionary*)[parser objectWithString:artistesJSON error:nil];    
     return [jsonData objectForKey:@"artistes"];
 }
 

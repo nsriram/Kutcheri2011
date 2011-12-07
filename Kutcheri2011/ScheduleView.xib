@@ -46,7 +46,7 @@
 								<string key="NSFrame">{{10, 12}, {242, 22}}</string>
 								<reference key="NSSuperview" ref="474874052"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="489440940"/>
+								<reference key="NSNextKeyView" ref="803933870"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
@@ -138,7 +138,7 @@
 									<int key="NSfFlags">16</int>
 								</object>
 							</object>
-							<object class="IBUIButton" id="489440940">
+							<object class="IBUIButton" id="803933870">
 								<reference key="NSNextResponder" ref="474874052"/>
 								<int key="NSvFlags">1316</int>
 								<string key="NSFrame">{{257, 8}, {30, 29}}</string>
@@ -161,6 +161,10 @@
 								<object class="NSColor" key="IBUINormalTitleShadowColor">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MC41AA</bytes>
+								</object>
+								<object class="NSCustomResource" key="IBUINormalBackgroundImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">calendar1-add.png</string>
 								</object>
 								<object class="IBUIFontDescription" key="IBUIFontDescription">
 									<int key="type">2</int>
@@ -262,7 +266,7 @@
 							<reference ref="170908438"/>
 							<reference ref="284062516"/>
 							<reference ref="850248967"/>
-							<reference ref="489440940"/>
+							<reference ref="803933870"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -283,7 +287,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">12</int>
-						<reference key="object" ref="489440940"/>
+						<reference key="object" ref="803933870"/>
 						<reference key="parent" ref="180592772"/>
 					</object>
 				</array>
@@ -342,6 +346,10 @@
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="NS.key.0">calendar1-add.png</string>
+			<string key="NS.object.0">{32, 32}</string>
+		</object>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>
 </archive>

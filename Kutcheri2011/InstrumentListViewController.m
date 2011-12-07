@@ -5,13 +5,12 @@
 @interface InstrumentListViewController()
 @property (nonatomic, retain) NSArray *instruments;
 @property (nonatomic, retain) NSString *section;
-@property (nonatomic, retain) SBJsonParser *parser;
 @property (nonatomic,retain) ScheduleListViewController *scheduleListViewController;
 @end                                 
 
 @implementation InstrumentListViewController
 
-@synthesize instruments,section, parser, scheduleListViewController;
+@synthesize instruments,section, scheduleListViewController;
 
 -(NSString *)fetchInstrumentsData {
     NSString *musicJSON = @"";
@@ -22,15 +21,9 @@
     return musicJSON;
 }
 
--(SBJsonParser *) jsonParser {
-    if(!self.parser){
-        self.parser = [[SBJsonParser alloc] init];
-    }
-    return self.parser;
-}
-
 -(NSArray *) parseInstrumentsJSON:(NSString *) instrumentsJSON {
-    NSDictionary *jsonData = (NSDictionary*)[[self jsonParser] objectWithString:instrumentsJSON error:nil];
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    NSDictionary *jsonData = (NSDictionary*)[parser objectWithString:instrumentsJSON error:nil];
     return [[jsonData objectForKey:@"instruments"] allObjects];
 }
 

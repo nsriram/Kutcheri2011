@@ -5,13 +5,12 @@
 @interface SabhaListViewController()
 @property (nonatomic,retain) NSArray *sabhas;
 @property (nonatomic,retain) NSString *section;
-@property (nonatomic, retain) SBJsonParser *parser;
 @property (nonatomic,retain) ScheduleListViewController *scheduleListViewController;
 @end
 
 @implementation SabhaListViewController
 
-@synthesize sabhas, section, parser,scheduleListViewController;
+@synthesize sabhas, section, scheduleListViewController;
 
 -(NSString *)fetchSabhasData {
     NSString *sabhaJSON = @"";
@@ -22,15 +21,9 @@
     return sabhaJSON;
 }
 
--(SBJsonParser *) jsonParser {
-    if(!self.parser){
-        self.parser = [[SBJsonParser alloc] init];
-    }
-    return self.parser;
-}
-
 -(NSArray *) parseSabhasJSON:(NSString *) sabhasJSON {
-    NSDictionary *jsonData = (NSDictionary*)[[self jsonParser] objectWithString:sabhasJSON error:nil];
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    NSDictionary *jsonData = (NSDictionary*)[parser objectWithString:sabhasJSON error:nil];
     return [jsonData objectForKey:@"sabhas"];
 }
 
