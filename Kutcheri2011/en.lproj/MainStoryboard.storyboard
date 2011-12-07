@@ -269,11 +269,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="trademark.png" id="F27-Gd-RM7">
-                                <rect key="frame" x="0.0" y="326" width="320" height="38"/>
+                                <rect key="frame" x="0.0" y="306" width="320" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_icon.jpg" id="YeZ-Zm-1yg">
-                                <rect key="frame" x="12" y="40" width="293" height="259"/>
+                                <rect key="frame" x="13" y="27" width="293" height="259"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
