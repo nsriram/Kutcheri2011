@@ -41,7 +41,6 @@
     NSDictionary *jsonData = (NSDictionary*)[[self jsonParser] objectWithString:contents error:nil];
     NSDictionary *postData = [jsonData objectForKey:@"post"];
     self.artistProfileURL = [postData objectForKey:@"url"];
-    NSLog(@"self.artistProfileURL=%@",self.artistProfileURL);
     return  [postData objectForKey:@"excerpt"];
 }
 
