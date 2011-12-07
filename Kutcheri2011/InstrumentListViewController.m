@@ -103,6 +103,15 @@
     return [self.instruments objectAtIndex:indexPath.row];
 }
 
++ (UIImage *) scale:(UIImage *)image
+{
+    CGSize size = CGSizeMake(40.0, 40.0);
+    UIGraphicsBeginImageContext(size);
+    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return scaledImage;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -114,7 +123,10 @@
     }
     NSDictionary *instrument = [self instrumentAtIndexPath:indexPath];      
     cell.textLabel.text = (NSString *)[instrument objectForKey:@"title"];
-    cell.detailTextLabel.text = (NSString *)[instrument objectForKey:@"description"];    
+    cell.detailTextLabel.text = (NSString *)[instrument objectForKey:@"description"];
+    NSString *imageName = (NSString *)[instrument objectForKey:@"slug"];
+    cell.imageView.image = [InstrumentListViewController scale:[UIImage imageNamed:[imageName stringByAppendingFormat:@".jpg"]]];
+
     return cell;
 }
 
