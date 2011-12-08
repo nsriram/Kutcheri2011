@@ -56,7 +56,7 @@
     if ([self savedSearchTerm])
     {
         [[[self searchDisplayController] searchBar] setText:[self savedSearchTerm]];
-    }  
+    }
     self.artistListTable.scrollEnabled = YES;
 }
 
@@ -114,7 +114,8 @@
             NSMutableArray *searchedTempArray = [[NSMutableArray alloc] init];
             for (NSMutableDictionary *currentArtist in artistesInSection) {
                 NSString* currentArtistName = (NSString *)[currentArtist objectForKey:@"title"];
-                if ([currentArtistName rangeOfString:searchTerm options:NSCaseInsensitiveSearch].location != NSNotFound){
+                NSString* currentArtistDesc = (NSString *)[currentArtist objectForKey:@"description"];
+                if (([currentArtistName rangeOfString:searchTerm options:NSCaseInsensitiveSearch].location != NSNotFound) || ([currentArtistDesc rangeOfString:searchTerm options:NSCaseInsensitiveSearch].location != NSNotFound)){
                     [searchedTempArray addObject:currentArtist];
                 }
             }
