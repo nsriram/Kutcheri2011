@@ -1,6 +1,4 @@
 #import <UIKit/UIKit.h>
 
-@interface SeasonViewController : UIViewController{
-
-}
+@interface SeasonViewController : UIViewController
 @end
