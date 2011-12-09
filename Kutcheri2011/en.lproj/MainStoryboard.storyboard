@@ -140,7 +140,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1574" y="-504"/>
+            <point key="canvasLocation" x="1595" y="-504"/>
         </scene>
         <scene sceneID="Fq2-b0-PqA">
             <objects>
@@ -264,6 +264,41 @@
             </objects>
             <point key="canvasLocation" x="1155" y="721"/>
         </scene>
+        <scene sceneID="Rct-8i-P8F">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsX-OI-IYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="BEi-0c-tOz" customClass="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3DG-5V-5x0">
+                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="eRS-7K-bUD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.20000000000000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="Season"/>
+                                    <segment title="Upcoming"/>
+                                </segments>
+                                <color key="tintColor" red="0.59999999999999998" green="0.20000000000000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="didChangeSegmentControl:" destination="BEi-0c-tOz" eventType="valueChanged" id="a0W-SP-03G"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="trademark.png" id="bo4-MO-hSW">
+                                <rect key="frame" x="0.0" y="325" width="320" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chennai Music Season" id="Tyd-dm-pYk"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackOpaque"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1146" y="-1106"/>
+        </scene>
         <scene sceneID="LJJ-iF-R4G">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3dO-Lv-LTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -276,38 +311,11 @@
                         <color key="tintColor" red="0.59999999999999998" green="0.20000000000000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ZI3-CY-fH1" kind="relationship" relationship="rootViewController" id="PLD-M1-W0d"/>
+                        <segue destination="BEi-0c-tOz" kind="relationship" relationship="rootViewController" id="r2H-HU-JVk"/>
                     </connections>
                 </navigationController>
             </objects>
             <point key="canvasLocation" x="692" y="-1106"/>
-        </scene>
-        <scene sceneID="FcS-HZ-RoT">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iR0-qA-4Te" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="ZI3-CY-fH1" customClass="SeasonViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4WL-xw-rsR">
-                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="trademark.png" id="F27-Gd-RM7">
-                                <rect key="frame" x="0.0" y="306" width="320" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_icon.jpg" id="YeZ-Zm-1yg">
-                                <rect key="frame" x="13" y="27" width="293" height="259"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Chennai Music Season" id="RqE-KD-LKP"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackOpaque"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="1155" y="-1100"/>
         </scene>
         <scene sceneID="Zfi-hq-UFG">
             <objects>
@@ -363,7 +371,6 @@
     <resources>
         <image name="artiste.png" width="21" height="21"/>
         <image name="home.png" width="21" height="21"/>
-        <image name="home_icon.jpg" width="290" height="250"/>
         <image name="instrument.png" width="21" height="21"/>
         <image name="like.png" width="40" height="34"/>
         <image name="sabha.png" width="21" height="21"/>
@@ -385,6 +392,13 @@
                 <relationship kind="outlet" name="artistListTable" candidateClass="UITableView"/>
             </relationships>
         </class>
+        <class className="HomeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="didChangeSegmentControl:" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="segmentedControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
         <class className="InstrumentListViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/InstrumentListViewController.h"/>
         </class>
@@ -396,9 +410,6 @@
             <relationships>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
-        </class>
-        <class className="SeasonViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SeasonViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

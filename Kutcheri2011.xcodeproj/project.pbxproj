@@ -37,10 +37,10 @@
 		C3276BE114829E830039954A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3276BDF14829E830039954A /* MainStoryboard.storyboard */; };
 		C3354AAA148BC3D40004036C /* artist.json in Resources */ = {isa = PBXBuildFile; fileRef = C3354AA9148BC3D40004036C /* artist.json */; };
 		C339227F148F8E870094F9E7 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C339227E148F8E870094F9E7 /* EventKit.framework */; };
-		C33D6D33148684B200B817AA /* SeasonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33D6D32148684B200B817AA /* SeasonViewController.m */; };
 		C348710C148AB80000B6E856 /* ScheduleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C348710B148AB80000B6E856 /* ScheduleListViewController.m */; };
 		C34C17CB14842089000A6744 /* InstrumentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34C17CA14842089000A6744 /* InstrumentListViewController.m */; };
 		C34C17CE1484D23A000A6744 /* SabhaListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34C17CD1484D23A000A6744 /* SabhaListViewController.m */; };
+		C34E65DA1492744300828D12 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34E65D91492744300828D12 /* HomeViewController.m */; };
 		C366B3FF148B473300DD2AC7 /* instruments.json in Resources */ = {isa = PBXBuildFile; fileRef = C366B3FE148B473300DD2AC7 /* instruments.json */; };
 		C36890CD148B790700633EF8 /* ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C36890CC148B790700633EF8 /* ScheduleCell.m */; };
 		C36890D0148B7BB900633EF8 /* ScheduleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36890CF148B7BB900633EF8 /* ScheduleView.xib */; };
@@ -108,14 +108,14 @@
 		C3276BE014829E830039954A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C3354AA9148BC3D40004036C /* artist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = artist.json; sourceTree = "<group>"; };
 		C339227E148F8E870094F9E7 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
-		C33D6D31148684B200B817AA /* SeasonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeasonViewController.h; sourceTree = "<group>"; };
-		C33D6D32148684B200B817AA /* SeasonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeasonViewController.m; sourceTree = "<group>"; };
 		C348710A148AB7FF00B6E856 /* ScheduleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleListViewController.h; sourceTree = "<group>"; };
 		C348710B148AB80000B6E856 /* ScheduleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleListViewController.m; sourceTree = "<group>"; };
 		C34C17C914842089000A6744 /* InstrumentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentListViewController.h; sourceTree = "<group>"; };
 		C34C17CA14842089000A6744 /* InstrumentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrumentListViewController.m; sourceTree = "<group>"; };
 		C34C17CC1484D23A000A6744 /* SabhaListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SabhaListViewController.h; sourceTree = "<group>"; };
 		C34C17CD1484D23A000A6744 /* SabhaListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SabhaListViewController.m; sourceTree = "<group>"; };
+		C34E65D81492744300828D12 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		C34E65D91492744300828D12 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C366B3FE148B473300DD2AC7 /* instruments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = instruments.json; sourceTree = "<group>"; };
 		C36890CB148B790700633EF8 /* ScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleCell.h; sourceTree = "<group>"; };
 		C36890CC148B790700633EF8 /* ScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleCell.m; sourceTree = "<group>"; };
@@ -275,12 +275,12 @@
 				C372A2F114854EAE00F136E5 /* ArtistDetailViewController.m */,
 				C348710A148AB7FF00B6E856 /* ScheduleListViewController.h */,
 				C348710B148AB80000B6E856 /* ScheduleListViewController.m */,
-				C33D6D31148684B200B817AA /* SeasonViewController.h */,
-				C33D6D32148684B200B817AA /* SeasonViewController.m */,
 				C30BCCF6148EAA2F008A0CFA /* ArtistShareAppDelegate.h */,
 				C30BCCF7148EAA2F008A0CFA /* ArtistShareAppDelegate.m */,
 				C3276BDF14829E830039954A /* MainStoryboard.storyboard */,
 				C36890CF148B7BB900633EF8 /* ScheduleView.xib */,
+				C34E65D81492744300828D12 /* HomeViewController.h */,
+				C34E65D91492744300828D12 /* HomeViewController.m */,
 			);
 			path = Kutcheri2011;
 			sourceTree = "<group>";
@@ -458,7 +458,6 @@
 				C34C17CB14842089000A6744 /* InstrumentListViewController.m in Sources */,
 				C34C17CE1484D23A000A6744 /* SabhaListViewController.m in Sources */,
 				C372A2F214854EAE00F136E5 /* ArtistDetailViewController.m in Sources */,
-				C33D6D33148684B200B817AA /* SeasonViewController.m in Sources */,
 				C348710C148AB80000B6E856 /* ScheduleListViewController.m in Sources */,
 				C36890CD148B790700633EF8 /* ScheduleCell.m in Sources */,
 				C39B4411148E96AE0049FBB1 /* Facebook.m in Sources */,
@@ -466,6 +465,7 @@
 				C39B4414148E96AE0049FBB1 /* FBLoginDialog.m in Sources */,
 				C39B4415148E96AE0049FBB1 /* FBRequest.m in Sources */,
 				C30BCCF8148EAA2F008A0CFA /* ArtistShareAppDelegate.m in Sources */,
+				C34E65DA1492744300828D12 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
