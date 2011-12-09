@@ -133,6 +133,8 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    self.artistScheduleTableView = nil;
+    self.indicator=nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
