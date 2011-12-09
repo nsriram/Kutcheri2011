@@ -73,6 +73,9 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    eventURL=nil;
+    schedules=nil;
+    indicator=nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated

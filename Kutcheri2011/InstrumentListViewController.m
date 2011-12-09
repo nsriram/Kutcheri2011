@@ -8,6 +8,8 @@
 @property (nonatomic,retain) ScheduleListViewController *scheduleListViewController;
 @end                                 
 
+#define BASE_URL @"http://www.ilovemadras.com/api/get_events_by_instrument/?count=300&id="
+
 @implementation InstrumentListViewController
 
 @synthesize instruments,section, scheduleListViewController;
@@ -63,10 +65,14 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    [self setSection:nil];
+    [self setInstruments:nil];
+    [self setScheduleListViewController:nil];
+    [self setTableView:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated
-{
+{   
     [super viewDidAppear:animated];
 }
 
@@ -80,9 +86,7 @@
     [super viewDidDisappear:animated];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
@@ -144,9 +148,8 @@
     NSDictionary *instrument = [self instrumentAtIndexPath:indexPath];
     NSString *instrumentID = (NSString *)[instrument objectForKey:@"id"];
     [self.navigationController pushViewController:self.scheduleListViewController animated:YES];
-    NSString *baseURL = @"http://www.ilovemadras.com/api/get_events_by_instrument/?count=300&id=";
     self.scheduleListViewController.schedules=nil;
-    self.scheduleListViewController.eventURL = [baseURL stringByAppendingFormat:@"%@",instrumentID];
+    self.scheduleListViewController.eventURL = [BASE_URL stringByAppendingFormat:@"%@",instrumentID];
 }
 
 @end

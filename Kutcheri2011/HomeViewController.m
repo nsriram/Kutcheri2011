@@ -1,8 +1,8 @@
 #import "HomeViewController.h"
-
+#define HOMEICON @"home_icon.jpg"
 @implementation HomeViewController
 
-@synthesize segmentedControl,imageView,latestEntriesTableView,indicator;
+@synthesize segmentedControl,image,imageView,latestEntriesTableView,indicator;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -20,6 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.image = [UIImage imageNamed:HOMEICON];
+    self.imageView = [[UIImageView alloc]initWithImage:image];
+    self.imageView.frame = CGRectMake(14.0, 50.0, 293.0, 259.0);    
     [self didChangeSegmentControl:self.segmentedControl];
 }
 
@@ -51,16 +54,9 @@
     }
 }
 
--(void) addImageView{
-    UIImage *image = [UIImage imageNamed:@"home_icon.jpg"];
-    self.imageView = [[UIImageView alloc]initWithImage:image];
-    self.imageView.frame = CGRectMake(14.0, 50.0, 293.0, 259.0);    
-}
-
 -(void) removeImageView{
     if(self.imageView){
         [self.imageView removeFromSuperview];
-        self.imageView=nil;
     }
 }
 
@@ -77,7 +73,6 @@
 - (void)didChangeSegmentControl:(UISegmentedControl *)control {
     if(control.selectedSegmentIndex == 0){
         [self removeTableView];
-        [self addImageView];
         [self.view addSubview:imageView];
     } else {
         [self removeImageView];
@@ -109,8 +104,9 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = @"some title";
-    cell.detailTextLabel.text = @"some desc";
+    static NSString *sometitle = @"some title";
+    cell.textLabel.text = sometitle;
+    cell.detailTextLabel.text = sometitle;
     return cell;
 }
 
@@ -120,6 +116,11 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    self.segmentedControl=nil;
+    self.image = nil;
+    self.imageView = nil;
+    self.latestEntriesTableView=nil;
+    self.indicator=nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

@@ -8,11 +8,15 @@
 @property (nonatomic,retain) ArtistDetailViewController *artistDetailViewController;
 @end                                    
 
+#define TITLE @"title"
+#define DESCRIPTION @"description"
+#define ID @"id"
+
 @implementation ArtistListViewController
 
 @synthesize artistListTable,artistes,sections,artistDetailViewController, searchedArtistes, searchedSections,savedSearchTerm;
 
--(NSString *)fetchArtistesData {
++(NSString *)fetchArtistesData {
     NSString *artistJSON = @"";
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"artist" ofType:@"json"];  
     if (filePath) {
@@ -29,7 +33,7 @@
 
 -(NSMutableDictionary*) artistes {
     if(!artistes){
-        NSString *artistesJSON = [self fetchArtistesData];
+        NSString *artistesJSON = [ArtistListViewController fetchArtistesData];
         artistes = [self parseArtistesJSON:artistesJSON];
     }
     return artistes;
@@ -66,6 +70,10 @@
     [self setSavedSearchTerm:[[[self searchDisplayController] searchBar] text]];
     [self setSearchedArtistes:nil];
     [self setSearchedSections:nil];
+    [self setArtistes:nil];
+    [self setSections:nil];
+    [self setArtistDetailViewController:nil];
+    [self setArtistListTable:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -113,8 +121,8 @@
             NSArray *artistesInSection = [artistes objectForKey:currentSection];
             NSMutableArray *searchedTempArray = [[NSMutableArray alloc] init];
             for (NSMutableDictionary *currentArtist in artistesInSection) {
-                NSString* currentArtistName = (NSString *)[currentArtist objectForKey:@"title"];
-                NSString* currentArtistDesc = (NSString *)[currentArtist objectForKey:@"description"];
+                NSString* currentArtistName = (NSString *)[currentArtist objectForKey:TITLE];
+                NSString* currentArtistDesc = (NSString *)[currentArtist objectForKey:DESCRIPTION];
                 if (([currentArtistName rangeOfString:searchTerm options:NSCaseInsensitiveSearch].location != NSNotFound) || ([currentArtistDesc rangeOfString:searchTerm options:NSCaseInsensitiveSearch].location != NSNotFound)){
                     [searchedTempArray addObject:currentArtist];
                 }
@@ -180,8 +188,8 @@
         artist = [self artistAtIndexPath:indexPath];
     }
     
-    cell.textLabel.text = (NSString *)[artist objectForKey:@"title"];
-    cell.detailTextLabel.text = (NSString *)[artist objectForKey:@"description"];        
+    cell.textLabel.text = (NSString *)[artist objectForKey:TITLE];
+    cell.detailTextLabel.text = (NSString *)[artist objectForKey:DESCRIPTION];        
     
     return cell;
 }
@@ -215,10 +223,10 @@
     else {
         artist = [self artistAtIndexPath:indexPath];
     }
-    NSString *artistID = (NSString *)[artist objectForKey:@"id"];
+    NSString *artistID = (NSString *)[artist objectForKey:ID];
     [self.navigationController pushViewController:self.artistDetailViewController animated:YES];
     self.artistDetailViewController.artistID = artistID;
-    self.artistDetailViewController.artistName.text =(NSString *)[artist objectForKey:@"title"];
+    self.artistDetailViewController.artistName.text =(NSString *)[artist objectForKey:TITLE];
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller 
