@@ -51,7 +51,6 @@
 		C3B0FE79148C037300BBA20D /* artiste.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0FE75148C037300BBA20D /* artiste.png */; };
 		C3B0FE7B148C037300BBA20D /* instrument.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0FE77148C037300BBA20D /* instrument.png */; };
 		C3B0FE7C148C037300BBA20D /* sabha.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0FE78148C037300BBA20D /* sabha.png */; };
-		C3B0FE7E148C044C00BBA20D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0FE7D148C044C00BBA20D /* icon.png */; };
 		C3B0FE80148C05DB00BBA20D /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0FE7F148C05DB00BBA20D /* home.png */; };
 		C3B0FE86148C0A0600BBA20D /* trademark.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0FE85148C0A0600BBA20D /* trademark.png */; };
 		C3B59EB61493C4C900C90AE1 /* chitraveena.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EA51493C4C900C90AE1 /* chitraveena.png */; };
@@ -71,6 +70,7 @@
 		C3B59EC41493C4C900C90AE1 /* veena.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EB31493C4C900C90AE1 /* veena.png */; };
 		C3B59EC51493C4C900C90AE1 /* violin.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EB41493C4C900C90AE1 /* violin.png */; };
 		C3B59EC61493C4C900C90AE1 /* vocal.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EB51493C4C900C90AE1 /* vocal.png */; };
+		C3B59EC81493D42C00C90AE1 /* ILMSquarelogo_iStore.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EC71493D42C00C90AE1 /* ILMSquarelogo_iStore.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,7 +79,7 @@
 		C30BCCF7148EAA2F008A0CFA /* ArtistShareAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistShareAppDelegate.m; sourceTree = "<group>"; };
 		C30BCD36148F5158008A0CFA /* calendar1-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar1-add.png"; sourceTree = "<group>"; };
 		C30BCD38148F5394008A0CFA /* home_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home_icon.jpg; sourceTree = "<group>"; };
-		C3276BC914829E830039954A /* Kutcheri2011.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kutcheri2011.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3276BC914829E830039954A /* MargazhiMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MargazhiMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3276BCD14829E830039954A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3276BCF14829E830039954A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3276BD114829E830039954A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -148,7 +148,6 @@
 		C3B0FE75148C037300BBA20D /* artiste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = artiste.png; sourceTree = "<group>"; };
 		C3B0FE77148C037300BBA20D /* instrument.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instrument.png; sourceTree = "<group>"; };
 		C3B0FE78148C037300BBA20D /* sabha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sabha.png; sourceTree = "<group>"; };
-		C3B0FE7D148C044C00BBA20D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		C3B0FE7F148C05DB00BBA20D /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		C3B0FE85148C0A0600BBA20D /* trademark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trademark.png; sourceTree = "<group>"; };
 		C3B59EA51493C4C900C90AE1 /* chitraveena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chitraveena.png; path = ../chitraveena.png; sourceTree = "<group>"; };
@@ -168,6 +167,7 @@
 		C3B59EB31493C4C900C90AE1 /* veena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = veena.png; path = ../veena.png; sourceTree = "<group>"; };
 		C3B59EB41493C4C900C90AE1 /* violin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = violin.png; path = ../violin.png; sourceTree = "<group>"; };
 		C3B59EB51493C4C900C90AE1 /* vocal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vocal.png; path = ../vocal.png; sourceTree = "<group>"; };
+		C3B59EC71493D42C00C90AE1 /* ILMSquarelogo_iStore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ILMSquarelogo_iStore.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,7 +214,7 @@
 		C3276BCA14829E830039954A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C3276BC914829E830039954A /* Kutcheri2011.app */,
+				C3276BC914829E830039954A /* MargazhiMusic.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -233,6 +233,7 @@
 		C3276BD314829E830039954A /* Kutcheri2011 */ = {
 			isa = PBXGroup;
 			children = (
+				C3B59EC71493D42C00C90AE1 /* ILMSquarelogo_iStore.png */,
 				C3B59EA51493C4C900C90AE1 /* chitraveena.png */,
 				C3B59EA61493C4C900C90AE1 /* dholki.png */,
 				C3B59EA71493C4C900C90AE1 /* flute.png */,
@@ -251,7 +252,6 @@
 				C3B59EB41493C4C900C90AE1 /* violin.png */,
 				C3B59EB51493C4C900C90AE1 /* vocal.png */,
 				C34D646F1493B9CD0091449B /* FB_Like.png */,
-				C3B0FE7D148C044C00BBA20D /* icon.png */,
 				C339227C148F7BBF0094F9E7 /* appicons */,
 				C317C77E148E9AA400C38537 /* facebook */,
 				C34C17C614841DC1000A6744 /* json-framework */,
@@ -358,7 +358,7 @@
 			);
 			name = Kutcheri2011;
 			productName = Kutcheri2011;
-			productReference = C3276BC914829E830039954A /* Kutcheri2011.app */;
+			productReference = C3276BC914829E830039954A /* MargazhiMusic.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -401,7 +401,6 @@
 				C3B0FE79148C037300BBA20D /* artiste.png in Resources */,
 				C3B0FE7B148C037300BBA20D /* instrument.png in Resources */,
 				C3B0FE7C148C037300BBA20D /* sabha.png in Resources */,
-				C3B0FE7E148C044C00BBA20D /* icon.png in Resources */,
 				C3B0FE80148C05DB00BBA20D /* home.png in Resources */,
 				C3B0FE86148C0A0600BBA20D /* trademark.png in Resources */,
 				C39B4405148E78BA0049FBB1 /* like.png in Resources */,
@@ -426,6 +425,7 @@
 				C3B59EC41493C4C900C90AE1 /* veena.png in Resources */,
 				C3B59EC51493C4C900C90AE1 /* violin.png in Resources */,
 				C3B59EC61493C4C900C90AE1 /* vocal.png in Resources */,
+				C3B59EC81493D42C00C90AE1 /* ILMSquarelogo_iStore.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,9 +491,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv7,
+					armv6,
+				);
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sriram Narasimhan (C8K6T8MPFA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sriram Narasimhan (C8K6T8MPFA)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -508,7 +512,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "6335141A-EE38-4DD0-8F92-5EB2268E34E5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6335141A-EE38-4DD0-8F92-5EB2268E34E5";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -516,9 +523,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv7,
+					armv6,
+				);
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sriram Narasimhan (C8K6T8MPFA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sriram Narasimhan (C8K6T8MPFA)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -527,7 +538,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "6335141A-EE38-4DD0-8F92-5EB2268E34E5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6335141A-EE38-4DD0-8F92-5EB2268E34E5";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -535,11 +549,16 @@
 		C3276BF314829E830039954A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv6,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kutcheri2011/Kutcheri2011-Prefix.pch";
 				INFOPLIST_FILE = "Kutcheri2011/Kutcheri2011-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = Kutcheri2011;
+				PRODUCT_NAME = MargazhiMusic;
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -547,11 +566,16 @@
 		C3276BF414829E830039954A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv6,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kutcheri2011/Kutcheri2011-Prefix.pch";
 				INFOPLIST_FILE = "Kutcheri2011/Kutcheri2011-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = Kutcheri2011;
+				PRODUCT_NAME = MargazhiMusic;
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

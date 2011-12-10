@@ -4,8 +4,12 @@
 #define LOGO_URL @"http://ilovemadras.com/images/logo/ILMLOGOBETA.png"
 #define APP_NAME @"Margazhi 2011"
 #define APP_DESC @"Chennai Music Season, December 2011"
+#define PHONE_APP_NAME @"Margazhi Music iPhone App"
+#define PHONE_APP_URL @"http://www.ilovemadras.com/margazhi-music-app/"
+#define PHONE_APP_DESC @"The Chennai Music Season or the Madras Music Season, as the season was originally called is celebrated in a period of six to seven weeks spanning the months of December and January in the English calendar, and during the Tamil month of Margazhi."
 #define PIC @"picture"
 #define ACTIONS @"actions"
+#define PHONE_APP_CAPTION @"Your interactive music season guide"
 
 @implementation ArtistShareAppDelegate
 @synthesize facebook;
@@ -33,6 +37,10 @@
         [defaults removeObjectForKey:@"FBExpirationDateKey"];
         [defaults synchronize];
     }
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [facebook handleOpenURL:url]; 
 }
 
 -(BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
@@ -68,13 +76,13 @@
 -(void) shareAppOnFB{
     SBJsonWriter *jsonWriter = [[SBJsonWriter alloc] init];
     NSArray* actionLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                      APP_NAME,@"name",HOME_URL,@"link", nil], nil];
+                                                      PHONE_APP_NAME,@"name",PHONE_APP_URL,@"link", nil], nil];
     NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                   APP_NAME, @"name",
-                                   APP_NAME, @"caption",
-                                   APP_DESC, @"description",
-                                   HOME_URL, @"link",
+                                   PHONE_APP_NAME, @"name",
+                                   PHONE_APP_CAPTION, @"caption",
+                                   PHONE_APP_DESC, @"description",
+                                   PHONE_APP_URL, @"link",
                                    LOGO_URL, PIC,
                                    actionLinksStr, @"actions",
                                    nil];    
