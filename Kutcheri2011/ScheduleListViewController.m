@@ -12,11 +12,10 @@
 @synthesize  eventURL,schedules,tableView,indicator,searchedSchedules,savedSearchTerm;
 
 - (void) loadDataWithOperation {
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.tableView.separatorColor = [UIColor lightGrayColor];
-    [self.tableView reloadData];
+    [self schedules];
+    [self performSelectorOnMainThread:@selector(reloadSchedules) withObject:nil waitUntilDone:YES];
 }
+
 
 - (void) loadData {
     NSOperationQueue *queue = [NSOperationQueue new];
@@ -27,6 +26,31 @@
     [queue addOperation:operation];
 }
 
+-(void) showNotification{
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Error loading"
+                          message:@" Please check your internet connection."
+                          delegate:nil
+                          cancelButtonTitle:@"Okay"
+                          otherButtonTitles:nil];
+    [alert show];
+}
+
+-(void) reloadSchedules {
+    if(networkError){
+        networkError = NO;
+        [self setSchedules:nil];
+        eventURL = nil;
+        [indicator stopAnimating];
+        [self showNotification];
+        return;
+    }
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.separatorColor = [UIColor lightGrayColor];
+    [self.tableView reloadData];    
+}
+
 -(NSArray*) schedules{    
     if(!schedules){
         NSError *error;
@@ -34,6 +58,10 @@
         NSString *scheduleString = [NSString stringWithContentsOfURL:url 
                                                             encoding:NSASCIIStringEncoding
                                                                error:&error];
+        if(!scheduleString && error)
+        {        
+            networkError = YES;
+        }
         SBJsonParser *parser = [[SBJsonParser alloc] init];
         NSDictionary *jsonData = (NSDictionary*)[parser objectWithString:scheduleString error:nil];
         schedules = [jsonData objectForKey:@"posts"];

@@ -33,9 +33,14 @@
 -(NSString *) urlContents:(NSString *)baseURL{
     NSError *error;
     NSURL *artistDetailURL = [NSURL URLWithString:[baseURL stringByAppendingFormat:@"%@",artistID]];
-    return [NSString stringWithContentsOfURL:artistDetailURL 
-                                    encoding:NSASCIIStringEncoding
-                                       error:&error];
+    NSString *contents = [NSString stringWithContentsOfURL:artistDetailURL 
+                                                  encoding:NSASCIIStringEncoding
+                                                     error:&error];
+    if(!contents && error)
+    {        
+        networkError = YES;        
+    }
+    return contents;
 }
 
 -(NSDictionary*) jsonData:(NSString*)targetURL{
@@ -72,7 +77,27 @@
     [self performSelectorOnMainThread:@selector(artistDetailTask) withObject:nil waitUntilDone:YES];
 }
 
+-(void) showNotification{
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Error loading"
+                          message:@" Please check your internet connection"
+                          delegate:nil
+                          cancelButtonTitle:@"Okay"
+                          otherButtonTitles:nil];
+    [alert show];
+}
+
 - (void) artistDetailTask{
+    if(networkError){
+        networkError = NO;
+        artistID = nil;
+        [indicator stopAnimating];
+        self.view = self.uiView;
+        [indicator removeFromSuperview];
+        [self showNotification];
+        return;
+    }    
+    
     self.artistDetail.text = [self artistDetails];
     CGRect frame = self.artistDetail.frame;
     frame.size.height = self.artistDetail.contentSize.height + 28;

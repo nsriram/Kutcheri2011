@@ -7,6 +7,7 @@
     NSString *eventURL;
     NSMutableArray *searchedSchedules;
     NSString *savedSearchTerm;
+    BOOL networkError;
 }
 @property (nonatomic,retain) NSString *eventURL;
 @property (nonatomic,retain) UITableView *tableView;

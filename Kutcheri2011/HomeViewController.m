@@ -27,6 +27,16 @@
 
 #pragma mark - View lifecycle
 
+-(void) showNotification{
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Error loading"
+                          message:@" Please check your internet connection."
+                          delegate:nil
+                          cancelButtonTitle:@"Okay"
+                          otherButtonTitles:nil];
+    [alert show];
+}
+
 - (BOOL) oneDayOld{
     BOOL oneDay = FALSE;
     if(!lastFetchedDate) {
@@ -54,6 +64,10 @@
     NSString *contents  = [NSString stringWithContentsOfURL:latestEventsURL
                                                    encoding:NSASCIIStringEncoding
                                                       error:&error];
+    if(!contents && error)
+    {        
+        networkError = YES;        
+    }
     SBJsonParser *parser = [[SBJsonParser alloc] init];
     return(NSMutableDictionary*)[parser objectWithString:contents error:nil];    
 }
@@ -81,17 +95,26 @@
     [self performSelectorOnMainThread:@selector(latestEntryTask) withObject:nil waitUntilDone:YES];
 }
 
-- (void) latestEntryTask{
+- (void) latestEntryTask {
     self.latestEntriesTableView = [[UITableView alloc] initWithFrame:CGRectMake(10.0, 38.0, 300.0, 280.0)];
     self.latestEntriesTableView.allowsSelection = NO;
     self.latestEntriesTableView.delegate = self;
     self.latestEntriesTableView.dataSource = self;
     self.latestEntriesTableView.separatorColor = [UIColor lightGrayColor];
     [self.latestEntriesTableView flashScrollIndicators]; 
-    if(self.segmentedControl.selectedSegmentIndex == 1){
-        [self.view addSubview:latestEntriesTableView];
-        [self.latestEntriesTableView reloadData];
-    }
+    
+    if(self.segmentedControl.selectedSegmentIndex == 1) {
+        if(!networkError){
+            [self.view addSubview:latestEntriesTableView];
+            [self.latestEntriesTableView reloadData];
+        } else {
+            networkError=NO;
+            [indicator stopAnimating];
+            [self showNotification];
+            [self setLatestEvents:nil];
+        }
+    } 
+    
 }
 - (void) loadData {
     NSOperationQueue *queue = [NSOperationQueue new];

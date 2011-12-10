@@ -11,6 +11,7 @@
     NSMutableDictionary *latestEvents;
     NSDate *lastFetchedDate;
     ArtistShareAppDelegate *artistShareAppDelegate;
+    BOOL networkError;
 }
 @property (nonatomic, retain) UISegmentedControl * segmentedControl;
 @property (nonatomic, retain) UIImage *image;

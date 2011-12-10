@@ -11,6 +11,7 @@
     UIActivityIndicatorView *indicator;    
     IBOutlet UIView *uiView;
     ArtistShareAppDelegate *artistShareAppDelegate;
+    BOOL networkError;
 }
 
 @property (nonatomic,retain) NSString *artistID;
