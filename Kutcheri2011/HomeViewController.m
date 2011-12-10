@@ -149,6 +149,8 @@ static NSString *LATEST_EVENTS_URL = @"http://www.ilovemadras.com/api/get_upcomi
         cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
         cell.textLabel.numberOfLines = 0;
         cell.textLabel.font = [UIFont fontWithName:@"Arial" size:13.0];
+        cell.detailTextLabel.lineBreakMode = UILineBreakModeWordWrap;
+        cell.detailTextLabel.numberOfLines = 0;
         cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:12.0];
     }
 
