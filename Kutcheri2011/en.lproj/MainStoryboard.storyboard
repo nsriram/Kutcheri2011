@@ -285,7 +285,7 @@
                                 </connections>
                             </segmentedControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="trademark.png" id="bo4-MO-hSW">
-                                <rect key="frame" x="0.0" y="325" width="320" height="38"/>
+                                <rect key="frame" x="0.0" y="329" width="320" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>

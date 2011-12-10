@@ -3,7 +3,7 @@
 
 #define HOMEICON @"home_icon.jpg"
 #define EVENTS @"events"
-#define ROW_HEIGHT 50
+#define ROW_HEIGHT 48
 
 @implementation HomeViewController
 
@@ -63,7 +63,7 @@ static NSString *LATEST_EVENTS_URL = @"http://www.ilovemadras.com/api/get_upcomi
 }
 
 - (void) latestEntryTask{
-    self.latestEntriesTableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 36.0, 300, 270.0)];
+    self.latestEntriesTableView = [[UITableView alloc] initWithFrame:CGRectMake(10.0, 38.0, 300.0, 280.0)];
     self.latestEntriesTableView.allowsSelection = NO;
     self.latestEntriesTableView.delegate = self;
     self.latestEntriesTableView.dataSource = self;
