@@ -9,6 +9,17 @@
 @property (nonatomic,retain) NSArray *schedules;
 @end                                    
 
+#define BASEURL @"http://www.ilovemadras.com/api/get_artiste_profile/?id="
+#define ARTIST_DETAILS_URL @"http://www.ilovemadras.com/api/get_events_by_artiste/?id="
+#define POST @"post"
+#define POSTS @"posts" 
+#define URL @"url"
+#define EXCERPT @"excerpt"
+#define ROW_HEIGHT 141.0
+#define WHEN @"when"
+#define WHERE @"where"
+#define WHAT @"what"
+
 @implementation ArtistDetailViewController
 
 @synthesize artistDetail, artistID, artistProfileURL, artistName, artistDetailCache, parser, artistScheduleTableView,schedules,indicator,uiView,artistShareAppDelegate;
@@ -30,22 +41,17 @@
 -(NSString *) urlContents:(NSString *)baseURL{
     NSError *error;
     NSURL *artistDetailURL = [NSURL URLWithString:[baseURL stringByAppendingFormat:@"%@",artistID]];    
-    NSLog(@"fetching contents");
-    NSString *contents = [NSString stringWithContentsOfURL:artistDetailURL 
+    return [NSString stringWithContentsOfURL:artistDetailURL 
                                                   encoding:NSASCIIStringEncoding
                                                      error:&error];
-    NSLog(@"fetched contents");    
-    return contents;
 }
 
 -(NSString *) artistProfile {
-    NSString *baseURL = @"http://www.ilovemadras.com/api/get_artiste_profile/?id=";
-    NSString *contents  = [self urlContents:baseURL];
-    NSLog(@"fetched profile contents");
+    NSString *contents  = [self urlContents:BASEURL];
     NSDictionary *jsonData = (NSDictionary*)[[self jsonParser] objectWithString:contents error:nil];
-    NSDictionary *postData = [jsonData objectForKey:@"post"];
-    self.artistProfileURL = [postData objectForKey:@"url"];
-    return  [postData objectForKey:@"excerpt"];
+    NSDictionary *postData = [jsonData objectForKey:POST];
+    self.artistProfileURL = [postData objectForKey:URL];
+    return  [postData objectForKey:EXCERPT];
 }
 
 -(NSString *) artistDetails{
@@ -59,11 +65,9 @@
 }
 
 -(NSArray*) fetchSchedules{    
-    NSString *baseURL = @"http://www.ilovemadras.com/api/get_events_by_artiste/?id=";
-    NSString *scheduleString  = [self urlContents:baseURL];
-    NSLog(@"fetched schedules");
+    NSString *scheduleString  = [self urlContents:ARTIST_DETAILS_URL];
     NSDictionary *jsonData = (NSDictionary*)[[self jsonParser] objectWithString:scheduleString error:nil];
-    schedules = [jsonData objectForKey:@"posts"];
+    schedules = [jsonData objectForKey:POSTS];
     return schedules;
 }
 
@@ -153,7 +157,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 141.0;
+    return ROW_HEIGHT;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -172,9 +176,9 @@
     }    
     
     NSDictionary *scheduleAtIndex = [self.schedules objectAtIndex:indexPath.row];
-    cell.when.text = (NSString *)[scheduleAtIndex objectForKey:@"when"];
-    cell.where.text = (NSString *)[scheduleAtIndex objectForKey:@"where"];
-    cell.what.text = (NSString *)[scheduleAtIndex objectForKey:@"what"];
+    cell.when.text = (NSString *)[scheduleAtIndex objectForKey:WHEN];
+    cell.where.text = (NSString *)[scheduleAtIndex objectForKey:WHERE];
+    cell.what.text = (NSString *)[scheduleAtIndex objectForKey:WHAT];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

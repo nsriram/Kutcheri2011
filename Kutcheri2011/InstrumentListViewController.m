@@ -53,6 +53,10 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    [self setSection:nil];
+    [self setInstruments:nil];
+    [self setScheduleListViewController:nil];
+    [self setTableView:nil];
 }
 
 #pragma mark - View lifecycle
@@ -130,7 +134,7 @@
     cell.detailTextLabel.text = (NSString *)[instrument objectForKey:@"description"];
     NSString *imageName = (NSString *)[instrument objectForKey:@"slug"];
     cell.imageView.image = [InstrumentListViewController scale:[UIImage imageNamed:[imageName stringByAppendingFormat:@".jpg"]]];
-
+    
     return cell;
 }
 

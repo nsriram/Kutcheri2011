@@ -39,11 +39,9 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MMM dd, yyyy hh:mm aaa"];
 
-    NSDate *startDate = [[NSDate alloc] init];
-    startDate = [dateFormatter dateFromString:[dateValue stringByAppendingFormat:@" %@",[startTime uppercaseString]]];
+    NSDate *startDate = [dateFormatter dateFromString:[dateValue stringByAppendingFormat:@" %@",[startTime uppercaseString]]];
     
-    NSDate *endDate = [[NSDate alloc] init];
-    endDate = [dateFormatter dateFromString:[dateValue stringByAppendingFormat:@"%@",[endTime uppercaseString]]];
+    NSDate *endDate = [dateFormatter dateFromString:[dateValue stringByAppendingFormat:@"%@",[endTime uppercaseString]]];
 
     EKEventStore *eventStore = [[EKEventStore alloc]init]; 
     EKCalendar *defautCalendar = [eventStore defaultCalendarForNewEvents];
@@ -80,6 +78,5 @@
         [self showAlert:@"Event Created" message:@"Event created with reminders 2Hours before, 1Day before."];
     }
 }
-
 
 @end

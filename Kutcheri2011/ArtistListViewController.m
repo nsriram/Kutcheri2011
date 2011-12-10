@@ -11,6 +11,9 @@
 #define TITLE @"title"
 #define DESCRIPTION @"description"
 #define ID @"id"
+#define ARTIST @"artist"
+#define JSON @"json"
+#define ARTISTS @"artistes"
 
 @implementation ArtistListViewController
 
@@ -18,7 +21,7 @@
 
 +(NSString *)fetchArtistesData {
     NSString *artistJSON = @"";
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"artist" ofType:@"json"];  
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:ARTIST ofType:JSON];  
     if (filePath) {
         artistJSON = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];  
     }
@@ -28,7 +31,7 @@
 -(NSMutableDictionary *) parseArtistesJSON:(NSString *) artistesJSON {
     SBJsonParser *parser = [[SBJsonParser alloc] init];
     NSDictionary *jsonData = (NSDictionary*)[parser objectWithString:artistesJSON error:nil];    
-    return [jsonData objectForKey:@"artistes"];
+    return [jsonData objectForKey:ARTISTS];
 }
 
 -(NSMutableDictionary*) artistes {
@@ -49,6 +52,12 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    [self setSearchedArtistes:nil];
+    [self setSearchedSections:nil];
+    [self setArtistes:nil];
+    [self setSections:nil];
+    [self setArtistDetailViewController:nil];
+    [self setArtistListTable:nil];
 }
 
 #pragma mark - View lifecycle
@@ -67,13 +76,13 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    [self setSavedSearchTerm:[[[self searchDisplayController] searchBar] text]];
     [self setSearchedArtistes:nil];
     [self setSearchedSections:nil];
     [self setArtistes:nil];
     [self setSections:nil];
     [self setArtistDetailViewController:nil];
     [self setArtistListTable:nil];
+    [self setSavedSearchTerm:[[[self searchDisplayController] searchBar] text]];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -139,26 +148,17 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    NSInteger numberOfSections;
     if (tableView == [[self searchDisplayController] searchResultsTableView])
-        numberOfSections = [[self searchedSections] count];
-    else
-        numberOfSections = [[self sections] count];
-    return numberOfSections;
+        return [[self searchedSections] count];
+    return [[self sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSInteger rows;
-    NSArray *artistesInSection;
-    if (tableView == [[self searchDisplayController] searchResultsTableView]) {
-        artistesInSection = [self.searchedArtistes objectForKey:[self.searchedSections objectAtIndex:section]];
-    }
-    else{
-        artistesInSection = [self.artistes objectForKey:[self.sections objectAtIndex:section]];
-    }
-    rows = artistesInSection.count;
-    return rows;
+    if (tableView == [[self searchDisplayController] searchResultsTableView])
+        return [[self.searchedArtistes objectForKey:[self.searchedSections objectAtIndex:section]] count];    
+    return [[self.artistes objectForKey:[self.sections objectAtIndex:section]]count];
+    
 }
 
 - (NSDictionary *) artistAtIndexPath:(NSIndexPath*) indexPath{
@@ -195,14 +195,9 @@
 }
 
 -(NSString*) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    NSString *someSection;
-    if (tableView == [[self searchDisplayController] searchResultsTableView]) {
-        someSection = [self.searchedSections objectAtIndex:section];
-    }
-    else {
-        someSection =[self.sections objectAtIndex:section];
-    }
-    return someSection;
+    if (tableView == [[self searchDisplayController] searchResultsTableView])
+        return [self.searchedSections objectAtIndex:section];
+    return [self.sections objectAtIndex:section];
 }
 
 -(ArtistDetailViewController *) artistDetailViewController {
