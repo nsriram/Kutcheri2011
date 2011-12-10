@@ -156,7 +156,7 @@
     NSString *instrumentID = (NSString *)[instrument objectForKey:@"id"];
     [self.navigationController pushViewController:self.scheduleListViewController animated:YES];
     self.scheduleListViewController.schedules=nil;
-    self.scheduleListViewController.eventURL = [BASE_URL stringByAppendingFormat:@"%@",instrumentID];
+    [self.scheduleListViewController setEventURL:[BASE_URL stringByAppendingFormat:@"%@",instrumentID]];
 }
 
 @end

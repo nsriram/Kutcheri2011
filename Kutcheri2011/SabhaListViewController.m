@@ -132,7 +132,7 @@
     [self.navigationController pushViewController:self.scheduleListViewController animated:YES];
     NSString *baseURL = @"http://www.ilovemadras.com/api/get_events_by_sabha/?count=300&id=";
     self.scheduleListViewController.schedules=nil;
-    self.scheduleListViewController.eventURL = [baseURL stringByAppendingFormat:@"%@",sabhaID];
+    [self.scheduleListViewController setEventURL:[baseURL stringByAppendingFormat:@"%@",sabhaID]];
 }
 
 @end

@@ -47,11 +47,7 @@
 
 - (void) setEventURL:(NSString *) newEventURL {
     if(eventURL != newEventURL) {
-        eventURL = [newEventURL copy];
-        CGRect progressFrame = CGRectMake(50, 50, 75.0, 75.0);
-        indicator = [[UIActivityIndicatorView alloc] initWithFrame:progressFrame];
-        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
-        [indicator setHidesWhenStopped:YES];
+        eventURL = [newEventURL copy];        
         self.view = indicator;
         [indicator startAnimating];
         [self loadData];        
@@ -68,6 +64,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    CGRect progressFrame = CGRectMake(50, 50, 75.0, 75.0);
+    self.indicator = [[UIActivityIndicatorView alloc] initWithFrame:progressFrame];
+    indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
 }
 
 - (void)viewDidUnload
@@ -122,10 +121,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"LSScheduleViewCell";
     ScheduleCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-
+    
     if (cell == nil) {
         NSArray* views = [[NSBundle mainBundle] loadNibNamed:@"ScheduleView" owner:nil options:nil];
-
+        
         for (UIView *view in views) {
             if([view isKindOfClass:[UITableViewCell class]])
             {

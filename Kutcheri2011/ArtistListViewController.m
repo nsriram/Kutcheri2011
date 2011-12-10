@@ -221,8 +221,8 @@
     }
     NSString *artistID = (NSString *)[artist objectForKey:ID];
     [self.navigationController pushViewController:self.artistDetailViewController animated:YES];
-    self.artistDetailViewController.artistID = artistID;
     self.artistDetailViewController.artistName.text =(NSString *)[artist objectForKey:TITLE];
+    self.artistDetailViewController.artistID = artistID;
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller 

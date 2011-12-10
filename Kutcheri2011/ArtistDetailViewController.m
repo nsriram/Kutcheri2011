@@ -5,7 +5,6 @@
 #import "SBJson.h"
 
 @interface ArtistDetailViewController()
-@property (retain) SBJsonParser *parser;
 @property (nonatomic,retain) NSArray *schedules;
 @end                                    
 
@@ -22,7 +21,7 @@
 
 @implementation ArtistDetailViewController
 
-@synthesize artistDetail, artistID, artistProfileURL, artistName, artistDetailCache, parser, artistScheduleTableView,schedules,indicator,uiView,artistShareAppDelegate;
+@synthesize artistDetail, artistID, artistProfileURL, artistName, artistDetailCache, artistScheduleTableView,schedules,indicator,uiView,artistShareAppDelegate;
 
 -(ArtistShareAppDelegate*) artistShareAppDelegate{
     if(!artistShareAppDelegate){
@@ -31,25 +30,22 @@
     return artistShareAppDelegate;
 }
 
-- (SBJsonParser*) jsonParser {
-    if(!parser){ 
-        parser = [[SBJsonParser alloc] init];    
-    }
-    return parser;
-}
-
 -(NSString *) urlContents:(NSString *)baseURL{
     NSError *error;
-    NSURL *artistDetailURL = [NSURL URLWithString:[baseURL stringByAppendingFormat:@"%@",artistID]];    
+    NSURL *artistDetailURL = [NSURL URLWithString:[baseURL stringByAppendingFormat:@"%@",artistID]];
     return [NSString stringWithContentsOfURL:artistDetailURL 
-                                                  encoding:NSASCIIStringEncoding
-                                                     error:&error];
+                                    encoding:NSASCIIStringEncoding
+                                       error:&error];
+}
+
+-(NSDictionary*) jsonData:(NSString*)targetURL{
+    NSString *contents  = [self urlContents:targetURL];
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    return(NSDictionary*)[parser objectWithString:contents error:nil];    
 }
 
 -(NSString *) artistProfile {
-    NSString *contents  = [self urlContents:BASEURL];
-    NSDictionary *jsonData = (NSDictionary*)[[self jsonParser] objectWithString:contents error:nil];
-    NSDictionary *postData = [jsonData objectForKey:POST];
+    NSDictionary *postData = [[self jsonData:BASEURL] objectForKey:POST];
     self.artistProfileURL = [postData objectForKey:URL];
     return  [postData objectForKey:EXCERPT];
 }
@@ -65,10 +61,9 @@
 }
 
 -(NSArray*) fetchSchedules{    
-    NSString *scheduleString  = [self urlContents:ARTIST_DETAILS_URL];
-    NSDictionary *jsonData = (NSDictionary*)[[self jsonParser] objectWithString:scheduleString error:nil];
+    NSDictionary *jsonData = [self jsonData:ARTIST_DETAILS_URL];
     schedules = [jsonData objectForKey:POSTS];
-    return schedules;
+    return schedules; 
 }
 
 - (void) loadDataWithOperation {
@@ -83,11 +78,13 @@
     frame.size.height = self.artistDetail.contentSize.height + 28;
     artistDetail.frame = frame;    
     [artistScheduleTableView removeFromSuperview];
+    
     artistScheduleTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, frame.size.height+8.0, 314.0, schedules.count * 141.0)];
     artistScheduleTableView.separatorColor = [UIColor whiteColor];
     artistScheduleTableView.dataSource=self;
     artistScheduleTableView.delegate=self;
     [artistScheduleTableView reloadData];
+    
     [indicator stopAnimating];
     self.view = self.uiView;
     [indicator removeFromSuperview];
@@ -107,10 +104,11 @@
 - (void) setArtistID:(NSString *) newArtistID {
     if(artistID != newArtistID) {
         artistID = [newArtistID copy];
-        CGRect progressFrame = CGRectMake(50, 50, 75.0, 75.0);
-        indicator = [[UIActivityIndicatorView alloc] initWithFrame:progressFrame];
-        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
-        [indicator setHidesWhenStopped:YES];
+        if(!indicator){
+            CGRect progressFrame = CGRectMake(50, 50, 75.0, 75.0);
+            indicator = [[UIActivityIndicatorView alloc] initWithFrame:progressFrame];
+            indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+        }
         self.view = indicator;
         [indicator startAnimating];
         [self loadData];
@@ -121,7 +119,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if(self && !artistDetailCache){
-        artistDetailCache = [[NSMutableDictionary alloc]init]; 
+        artistDetailCache = [[NSMutableDictionary alloc]init ]; 
     }
     return self;
 }

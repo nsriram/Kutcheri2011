@@ -62,10 +62,11 @@ static NSString *sometitle = @"some title";
 }
 
 -(void) addTableView{
-    CGRect progressFrame = CGRectMake(50, 50, 75.0, 75.0);
-    indicator = [[UIActivityIndicatorView alloc] initWithFrame:progressFrame];
-    indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
-    [indicator setHidesWhenStopped:YES];
+    if(!indicator){
+        CGRect progressFrame = CGRectMake(50, 50, 75.0, 75.0);
+        indicator = [[UIActivityIndicatorView alloc] initWithFrame:progressFrame];
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+    }
     [self.view addSubview:indicator];
     [indicator startAnimating];
     [self loadData];    
