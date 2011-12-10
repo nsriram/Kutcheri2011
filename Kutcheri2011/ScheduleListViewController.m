@@ -46,7 +46,7 @@
 }
 
 - (void) setEventURL:(NSString *) newEventURL {
-    if(eventURL != newEventURL) {
+    if(![eventURL isEqualToString:newEventURL]) {
         eventURL = [newEventURL copy];        
         if(!indicator){
             CGRect progressFrame = CGRectMake(50, 50, 75.0, 75.0);
