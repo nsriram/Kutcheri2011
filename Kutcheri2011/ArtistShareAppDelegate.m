@@ -4,6 +4,8 @@
 #define LOGO_URL @"http://ilovemadras.com/images/logo/ILMLOGOBETA.png"
 #define APP_NAME @"Margazhi 2011"
 #define APP_DESC @"Chennai Music Season, December 2011"
+#define APP_CAPTION @"To know more about the artist and their performance(s) this season, visit music.ilovemadras.com."
+
 #define PHONE_APP_NAME @"Margazhi Music iPhone App"
 #define PHONE_APP_URL @"http://www.ilovemadras.com/margazhi-music-app/"
 #define PHONE_APP_DESC @"The Chennai Music Season or the Madras Music Season, as the season was originally called is celebrated in a period of six to seven weeks spanning the months of December and January in the English calendar, and during the Tamil month of Margazhi."
@@ -64,7 +66,7 @@
     NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    artistName, @"name",
-                                   artistName, @"caption",
+                                   APP_CAPTION, @"caption",
                                    APP_DESC, @"description",
                                    artistURL, @"link",
                                    LOGO_URL, PIC,

@@ -86,7 +86,7 @@
     self.latestEntriesTableView.allowsSelection = NO;
     self.latestEntriesTableView.delegate = self;
     self.latestEntriesTableView.dataSource = self;
-    self.latestEntriesTableView.separatorColor = [UIColor blackColor];
+    self.latestEntriesTableView.separatorColor = [UIColor lightGrayColor];
     [self.latestEntriesTableView flashScrollIndicators]; 
     [self.view addSubview:latestEntriesTableView];
     [self.latestEntriesTableView reloadData];

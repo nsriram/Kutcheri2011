@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C3276BC814829E830039954A"
-               BuildableName = "Kutcheri2011.app"
+               BuildableName = "MargazhiMusic.app"
                BlueprintName = "Kutcheri2011"
                ReferencedContainer = "container:Kutcheri2011.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C3276BC814829E830039954A"
-            BuildableName = "Kutcheri2011.app"
+            BuildableName = "MargazhiMusic.app"
             BlueprintName = "Kutcheri2011"
             ReferencedContainer = "container:Kutcheri2011.xcodeproj">
          </BuildableReference>
@@ -50,7 +50,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C3276BC814829E830039954A"
-            BuildableName = "Kutcheri2011.app"
+            BuildableName = "MargazhiMusic.app"
             BlueprintName = "Kutcheri2011"
             ReferencedContainer = "container:Kutcheri2011.xcodeproj">
          </BuildableReference>
@@ -68,7 +68,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C3276BC814829E830039954A"
-            BuildableName = "Kutcheri2011.app"
+            BuildableName = "MargazhiMusic.app"
             BlueprintName = "Kutcheri2011"
             ReferencedContainer = "container:Kutcheri2011.xcodeproj">
          </BuildableReference>

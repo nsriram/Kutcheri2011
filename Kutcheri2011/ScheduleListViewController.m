@@ -48,10 +48,9 @@
             CGRect progressFrame = CGRectMake(50, 50, 75.0, 75.0);
             self.indicator = [[UIActivityIndicatorView alloc] initWithFrame:progressFrame];
             indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
-            [indicator setHidden:NO];
         }
         self.view = indicator;
-        [indicator startAnimating];
+        [indicator startAnimating];        
         [self loadData];        
     }
 }
