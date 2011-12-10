@@ -7,7 +7,7 @@
 @end
 
 @implementation ScheduleListViewController
-@synthesize  eventURL,schedules,tableView,parser,indicator;
+@synthesize  eventURL,schedules,tableView,parser,indicator,searchedSchedules,savedSearchTerm;
 
 - (void) loadDataWithOperation {
     self.tableView.delegate = self;
@@ -79,6 +79,7 @@
     schedules=nil;
     indicator=nil;
     tableView=nil;
+    searchedSchedules=nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -108,6 +109,33 @@
 
 #pragma mark - Table view data source
 
+-(void) clearSearchResults {
+    if ([self searchedSchedules] == nil) {
+        NSMutableArray *array = [[NSMutableArray alloc] init];
+        [self setSearchedSchedules:array];
+    }
+}
+
+- (void)handleSearchForTerm:(NSString *)searchTerm
+{
+    [self setSavedSearchTerm:searchTerm];
+    [self clearSearchResults];
+    [[self searchedSchedules] removeAllObjects];
+	
+    if ([[self savedSearchTerm] length] > 1)
+    {
+        for(NSDictionary *currentSchedule in schedules){
+            NSString *when = (NSString *)[currentSchedule objectForKey:@"when"];
+            NSString *what = (NSString *)[currentSchedule objectForKey:@"what"];
+            NSString *where = (NSString *)[currentSchedule objectForKey:@"where"];            
+
+            if(([when rangeOfString:searchTerm options:NSCaseInsensitiveSearch].location != NSNotFound) || ([where rangeOfString:searchTerm options:NSCaseInsensitiveSearch].location != NSNotFound) || ([what rangeOfString:searchTerm options:NSCaseInsensitiveSearch].location != NSNotFound)){
+                [searchedSchedules addObject:currentSchedule];
+            }        
+        }
+    }
+}   
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
@@ -116,15 +144,20 @@
     return 130.0;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    [indicator stopAnimating];
-    self.view = self.tableView;
+- (NSInteger)tableView:(UITableView *)localTableView numberOfRowsInSection:(NSInteger)section{
+    if([indicator isAnimating]){
+        [indicator stopAnimating];
+        self.view = localTableView;        
+    }
+    if (localTableView == [[self searchDisplayController] searchResultsTableView]){
+        return self.searchedSchedules.count;
+    }
     return self.schedules.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)localTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"LSScheduleViewCell";
-    ScheduleCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    ScheduleCell *cell = [localTableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
         NSArray* views = [[NSBundle mainBundle] loadNibNamed:@"ScheduleView" owner:nil options:nil];
@@ -136,8 +169,15 @@
             }
         }
     }    
-    
-    NSDictionary *scheduleAtIndex = [self.schedules objectAtIndex:indexPath.row];
+
+    NSDictionary *scheduleAtIndex;
+    if (localTableView == [[self searchDisplayController] searchResultsTableView]) {
+        scheduleAtIndex = [self.searchedSchedules objectAtIndex:indexPath.row];
+    }
+    else {
+        scheduleAtIndex = [self.schedules objectAtIndex:indexPath.row];
+    }
+
     cell.when.text = (NSString *)[scheduleAtIndex objectForKey:@"when"];
     cell.what.text = (NSString *)[scheduleAtIndex objectForKey:@"what"];
     cell.where.text = (NSString *)[scheduleAtIndex objectForKey:@"where"];
@@ -149,5 +189,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller 
+shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self handleSearchForTerm:searchString];    
+    return YES;
+}
+
+- (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller
+{
+    [self setSavedSearchTerm:nil];	
+    [[self tableView] reloadData];
+}
 
 @end

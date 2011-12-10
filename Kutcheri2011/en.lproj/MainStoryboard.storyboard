@@ -332,6 +332,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="MkY-o5-sxe">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="a0Y-Dy-42i" id="Qe2-LP-1R4"/>
+                                    </connections>
+                                </searchBar>
                                 <connections>
                                     <outlet property="dataSource" destination="a0Y-Dy-42i" id="QxG-oV-fgx"/>
                                     <outlet property="delegate" destination="a0Y-Dy-42i" id="pYw-Ir-T0h"/>
@@ -343,9 +352,19 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackOpaque"/>
                     <connections>
+                        <outlet property="searchDisplayController" destination="RNB-4s-CN2" id="t08-yH-ZfN"/>
                         <outlet property="tableView" destination="Fg4-b4-MI0" id="8ke-uW-3By"/>
                     </connections>
                 </viewController>
+                <searchDisplayController id="RNB-4s-CN2">
+                    <connections>
+                        <outlet property="delegate" destination="a0Y-Dy-42i" id="DFg-y4-Kv0"/>
+                        <outlet property="searchBar" destination="MkY-o5-sxe" id="Rrx-m8-J7Y"/>
+                        <outlet property="searchContentsController" destination="a0Y-Dy-42i" id="4dt-Lu-Pin"/>
+                        <outlet property="searchResultsDataSource" destination="a0Y-Dy-42i" id="iHt-4g-3i1"/>
+                        <outlet property="searchResultsDelegate" destination="a0Y-Dy-42i" id="LHt-DZ-Fcm"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1580" y="112"/>
         </scene>
