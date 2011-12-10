@@ -174,6 +174,8 @@ static NSString *LATEST_EVENTS_URL = @"http://www.ilovemadras.com/api/get_upcomi
     self.imageView = nil;
     self.latestEntriesTableView=nil;
     self.indicator=nil;
+    self.latestEventDays=nil;
+    self.latestEvents=nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
