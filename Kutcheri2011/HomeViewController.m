@@ -3,6 +3,7 @@
 @implementation HomeViewController
 
 @synthesize segmentedControl,image,imageView,latestEntriesTableView,indicator;
+static NSString *sometitle = @"some title";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -104,7 +105,6 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    static NSString *sometitle = @"some title";
     cell.textLabel.text = sometitle;
     cell.detailTextLabel.text = sometitle;
     return cell;

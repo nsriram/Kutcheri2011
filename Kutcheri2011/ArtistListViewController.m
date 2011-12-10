@@ -14,6 +14,7 @@
 #define ARTIST @"artist"
 #define JSON @"json"
 #define ARTISTS @"artistes"
+#define ARTISTDETAILVIEW @"ArtistDetailView"
 
 @implementation ArtistListViewController
 
@@ -203,7 +204,7 @@
 -(ArtistDetailViewController *) artistDetailViewController {
     if(!artistDetailViewController){
         self.artistDetailViewController = 
-        [self.storyboard instantiateViewControllerWithIdentifier:@"ArtistDetailView"];
+        [self.storyboard instantiateViewControllerWithIdentifier:ARTISTDETAILVIEW];
         self.artistDetailViewController.artistDetailCache = [[NSMutableDictionary alloc] init];
     }
     return artistDetailViewController;

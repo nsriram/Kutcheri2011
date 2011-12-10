@@ -9,6 +9,9 @@
 @end                                 
 
 #define BASE_URL @"http://www.ilovemadras.com/api/get_events_by_instrument/?count=300&id="
+#define TITLE @"title"
+#define DESCRIPTION @"description"
+#define SLUG @"slug"
 
 @implementation InstrumentListViewController
 
@@ -130,9 +133,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     NSDictionary *instrument = [self instrumentAtIndexPath:indexPath];      
-    cell.textLabel.text = (NSString *)[instrument objectForKey:@"title"];
-    cell.detailTextLabel.text = (NSString *)[instrument objectForKey:@"description"];
-    NSString *imageName = (NSString *)[instrument objectForKey:@"slug"];
+    cell.textLabel.text = (NSString *)[instrument objectForKey:TITLE];
+    cell.detailTextLabel.text = (NSString *)[instrument objectForKey:DESCRIPTION];
+    NSString *imageName = (NSString *)[instrument objectForKey:SLUG];
     cell.imageView.image = [InstrumentListViewController scale:[UIImage imageNamed:[imageName stringByAppendingFormat:@".jpg"]]];
     
     return cell;

@@ -121,7 +121,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if(self && !artistDetailCache){
-        artistDetailCache = [NSMutableDictionary dictionary]; 
+        artistDetailCache = [[NSMutableDictionary alloc]init]; 
     }
     return self;
 }
@@ -137,8 +137,9 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    self.artistScheduleTableView = nil;
-    self.indicator=nil;
+    [self setArtistScheduleTableView:nil];
+    [self setIndicator:nil];
+    [self setArtistShareAppDelegate:nil];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
