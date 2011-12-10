@@ -42,7 +42,7 @@ static NSString *LATEST_EVENTS_URL = @"http://www.ilovemadras.com/api/get_upcomi
     [super viewDidLoad];
     self.image = [UIImage imageNamed:HOMEICON];
     self.imageView = [[UIImageView alloc]initWithImage:image];
-    self.imageView.frame = CGRectMake(14.0, 50.0, 293.0, 259.0);    
+    self.imageView.frame = CGRectMake(10.0, 50.0, 293.0, 259.0);    
     [self didChangeSegmentControl:self.segmentedControl];
 }
 
