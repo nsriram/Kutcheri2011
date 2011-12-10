@@ -4,10 +4,11 @@
 #define HOMEICON @"home_icon.jpg"
 #define EVENTS @"events"
 #define ROW_HEIGHT 48
+#define DAY_IN_SECONDS 86400.0
 
 @implementation HomeViewController
 
-@synthesize segmentedControl,image,imageView,latestEntriesTableView,indicator,latestEvents,latestEventDays;
+@synthesize segmentedControl,image,imageView,latestEntriesTableView,indicator,latestEvents,latestEventDays,lastFetchedDate;
 
 static NSString *LATEST_EVENTS_URL = @"http://www.ilovemadras.com/api/get_upcoming_events/";
 
@@ -23,6 +24,19 @@ static NSString *LATEST_EVENTS_URL = @"http://www.ilovemadras.com/api/get_upcomi
 }
 
 #pragma mark - View lifecycle
+
+- (BOOL) oneDayOld{
+    BOOL oneDay = FALSE;
+    if(!lastFetchedDate) {
+        oneDay = FALSE;
+    }
+    NSDate *now = [[NSDate alloc]init];
+    NSTimeInterval interval = [now timeIntervalSinceDate: lastFetchedDate];
+    if(interval > DAY_IN_SECONDS) {
+        oneDay = TRUE;        
+    }
+    return oneDay;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,15 +57,18 @@ static NSString *LATEST_EVENTS_URL = @"http://www.ilovemadras.com/api/get_upcomi
 }
 
 -(NSMutableDictionary *) latestEvents {
-    if(!latestEvents){
+    if(!latestEvents || [self oneDayOld]){
+        latestEvents = nil;
+        latestEventDays = nil;
         latestEvents = [[self jsonData] objectForKey:EVENTS];
+        lastFetchedDate = [[NSDate alloc]init];
     }
     return latestEvents;
 }
 
 -(NSArray*) latestEventDays {
     if(!latestEventDays) {
-        latestEventDays = [[self.latestEvents allKeys] sortedArrayUsingSelector:@selector(compare:)];
+        latestEventDays = [[latestEvents allKeys] sortedArrayUsingSelector:@selector(compare:)];
     }
     return latestEventDays;
 }
@@ -131,11 +148,11 @@ static NSString *LATEST_EVENTS_URL = @"http://www.ilovemadras.com/api/get_upcomi
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     [indicator stopAnimating];
-    return [[self.latestEvents objectForKey:[self.latestEventDays objectAtIndex:section]] count];
+    return [[latestEvents objectForKey:[self.latestEventDays objectAtIndex:section]] count];
 }          
 
 - (NSDictionary *) eventAtIndexPath:(NSIndexPath*) indexPath{
-    NSDictionary *eventsInDay = [self.latestEvents objectForKey:[self.latestEventDays objectAtIndex:indexPath.section]];
+    NSDictionary *eventsInDay = [latestEvents objectForKey:[self.latestEventDays objectAtIndex:indexPath.section]];
     return eventsInDay;
 }
 
@@ -148,10 +165,10 @@ static NSString *LATEST_EVENTS_URL = @"http://www.ilovemadras.com/api/get_upcomi
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
         cell.textLabel.numberOfLines = 0;
-        cell.textLabel.font = [UIFont fontWithName:@"Arial" size:13.0];
+        cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:13.0];
         cell.detailTextLabel.lineBreakMode = UILineBreakModeWordWrap;
         cell.detailTextLabel.numberOfLines = 0;
-        cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:12.0];
+        cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:12.0];
     }
 
     NSDictionary *eventsInDay = [self eventAtIndexPath:indexPath];
@@ -176,6 +193,7 @@ static NSString *LATEST_EVENTS_URL = @"http://www.ilovemadras.com/api/get_upcomi
     self.indicator=nil;
     self.latestEventDays=nil;
     self.latestEvents=nil;
+    self.lastFetchedDate=nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
