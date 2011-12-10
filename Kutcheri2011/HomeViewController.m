@@ -5,12 +5,14 @@
 #define EVENTS @"events"
 #define ROW_HEIGHT 48
 #define DAY_IN_SECONDS 86400.0
+#define FONT_NAME @"Helvetica"
+#define WHERE @"where"
+#define WHAT  @"what"
+#define LATEST_EVENTS_URL @"http://www.ilovemadras.com/api/get_upcoming_events/"
 
 @implementation HomeViewController
 
 @synthesize segmentedControl,image,imageView,latestEntriesTableView,indicator,latestEvents,latestEventDays,lastFetchedDate;
-
-static NSString *LATEST_EVENTS_URL = @"http://www.ilovemadras.com/api/get_upcoming_events/";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -165,18 +167,18 @@ static NSString *LATEST_EVENTS_URL = @"http://www.ilovemadras.com/api/get_upcomi
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
         cell.textLabel.numberOfLines = 0;
-        cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:13.0];
+        cell.textLabel.font = [UIFont fontWithName:FONT_NAME size:13.0];
         cell.detailTextLabel.lineBreakMode = UILineBreakModeWordWrap;
         cell.detailTextLabel.numberOfLines = 0;
-        cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:12.0];
+        cell.detailTextLabel.font = [UIFont fontWithName:FONT_NAME size:12.0];
     }
 
     NSDictionary *eventsInDay = [self eventAtIndexPath:indexPath];
     NSArray *timings = [[eventsInDay allKeys] sortedArrayUsingSelector:@selector(compare:)];
     NSString *when = [timings objectAtIndex:indexPath.row];
     NSDictionary *whatAndWhere = [eventsInDay objectForKey:when];    
-    cell.textLabel.text = [whatAndWhere objectForKey:@"what"];
-    cell.detailTextLabel.text = [when stringByAppendingFormat:@", %@",[whatAndWhere objectForKey:@"where"]];
+    cell.textLabel.text = [whatAndWhere objectForKey:WHAT];
+    cell.detailTextLabel.text = [when stringByAppendingFormat:@", %@",[whatAndWhere objectForKey:WHERE]];
     return cell;
 }
 

@@ -2,12 +2,14 @@
 #import "SBJson.h"
 #import "ScheduleCell.h"
 
-@interface ScheduleListViewController()
-@property (nonatomic, retain) SBJsonParser *parser;
-@end
+#define WHEN  @"when"
+#define WHERE @"where"
+#define WHAT  @"what"
+#define NIB_NAME @"ScheduleView"
 
 @implementation ScheduleListViewController
-@synthesize  eventURL,schedules,tableView,parser,indicator,searchedSchedules,savedSearchTerm;
+
+@synthesize  eventURL,schedules,tableView,indicator,searchedSchedules,savedSearchTerm;
 
 - (void) loadDataWithOperation {
     self.tableView.delegate = self;
@@ -25,13 +27,6 @@
     [queue addOperation:operation];
 }
 
-- (SBJsonParser*) jsonParser {
-    if(!parser){ 
-        parser = [[SBJsonParser alloc] init];    
-    }
-    return parser;
-}
-
 -(NSArray*) schedules{    
     if(!schedules){
         NSError *error;
@@ -39,7 +34,8 @@
         NSString *scheduleString = [NSString stringWithContentsOfURL:url 
                                                             encoding:NSASCIIStringEncoding
                                                                error:&error];
-        NSDictionary *jsonData = (NSDictionary*)[[self jsonParser] objectWithString:scheduleString error:nil];
+        SBJsonParser *parser = [[SBJsonParser alloc] init];
+        NSDictionary *jsonData = (NSDictionary*)[parser objectWithString:scheduleString error:nil];
         schedules = [jsonData objectForKey:@"posts"];
     }
     return schedules;
@@ -47,7 +43,7 @@
 
 - (void) setEventURL:(NSString *) newEventURL {
     if(![eventURL isEqualToString:newEventURL]) {
-        eventURL = [newEventURL copy];        
+        eventURL = [newEventURL copy];
         if(!indicator){
             CGRect progressFrame = CGRectMake(50, 50, 75.0, 75.0);
             self.indicator = [[UIActivityIndicatorView alloc] initWithFrame:progressFrame];
@@ -80,6 +76,7 @@
     indicator=nil;
     tableView=nil;
     searchedSchedules=nil;
+    [self setSavedSearchTerm:[[[self searchDisplayController] searchBar] text]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -125,10 +122,10 @@
     if ([[self savedSearchTerm] length] > 1)
     {
         for(NSDictionary *currentSchedule in schedules){
-            NSString *when = (NSString *)[currentSchedule objectForKey:@"when"];
-            NSString *what = (NSString *)[currentSchedule objectForKey:@"what"];
-            NSString *where = (NSString *)[currentSchedule objectForKey:@"where"];            
-
+            NSString *when = (NSString *)[currentSchedule objectForKey:WHEN];
+            NSString *what = (NSString *)[currentSchedule objectForKey:WHAT];
+            NSString *where = (NSString *)[currentSchedule objectForKey:WHERE];            
+            
             if(([when rangeOfString:searchTerm options:NSCaseInsensitiveSearch].location != NSNotFound) || ([where rangeOfString:searchTerm options:NSCaseInsensitiveSearch].location != NSNotFound) || ([what rangeOfString:searchTerm options:NSCaseInsensitiveSearch].location != NSNotFound)){
                 [searchedSchedules addObject:currentSchedule];
             }        
@@ -160,7 +157,7 @@
     ScheduleCell *cell = [localTableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
-        NSArray* views = [[NSBundle mainBundle] loadNibNamed:@"ScheduleView" owner:nil options:nil];
+        NSArray* views = [[NSBundle mainBundle] loadNibNamed:NIB_NAME owner:nil options:nil];
         
         for (UIView *view in views) {
             if([view isKindOfClass:[UITableViewCell class]])
@@ -169,7 +166,7 @@
             }
         }
     }    
-
+    
     NSDictionary *scheduleAtIndex;
     if (localTableView == [[self searchDisplayController] searchResultsTableView]) {
         scheduleAtIndex = [self.searchedSchedules objectAtIndex:indexPath.row];
@@ -177,10 +174,10 @@
     else {
         scheduleAtIndex = [self.schedules objectAtIndex:indexPath.row];
     }
-
-    cell.when.text = (NSString *)[scheduleAtIndex objectForKey:@"when"];
-    cell.what.text = (NSString *)[scheduleAtIndex objectForKey:@"what"];
-    cell.where.text = (NSString *)[scheduleAtIndex objectForKey:@"where"];
+    
+    cell.when.text = (NSString *)[scheduleAtIndex objectForKey:WHEN];
+    cell.what.text = (NSString *)[scheduleAtIndex objectForKey:WHAT];
+    cell.where.text = (NSString *)[scheduleAtIndex objectForKey:WHERE];
     
     return cell;    
 }
