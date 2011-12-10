@@ -6,11 +6,15 @@
     UIImage *image;
     UITableView *latestEntriesTableView;
     UIActivityIndicatorView *indicator;
+    NSArray *latestEventDays;
+    NSMutableDictionary *latestEvents;
 }
 @property (nonatomic, retain) UISegmentedControl * segmentedControl;
 @property (nonatomic, retain) UIImage *image;
 @property (nonatomic, retain) UIImageView *imageView;
 @property (nonatomic, retain) UITableView *latestEntriesTableView;
 @property (nonatomic,retain) UIActivityIndicatorView *indicator;
+@property (nonatomic,retain) NSArray *latestEventDays;
+@property (nonatomic,retain) NSMutableDictionary *latestEvents;
 - (IBAction)didChangeSegmentControl:(UISegmentedControl *)control;
 @end

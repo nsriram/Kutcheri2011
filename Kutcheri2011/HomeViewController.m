@@ -1,9 +1,15 @@
 #import "HomeViewController.h"
+#import "SBJson.h"
+
 #define HOMEICON @"home_icon.jpg"
+#define EVENTS @"events"
+#define ROW_HEIGHT 40
+
 @implementation HomeViewController
 
-@synthesize segmentedControl,image,imageView,latestEntriesTableView,indicator;
-static NSString *sometitle = @"some title";
+@synthesize segmentedControl,image,imageView,latestEntriesTableView,indicator,latestEvents,latestEventDays;
+
+static NSString *LATEST_EVENTS_URL = @"http://www.ilovemadras.com/api/get_upcoming_events/";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -18,7 +24,6 @@ static NSString *sometitle = @"some title";
 
 #pragma mark - View lifecycle
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.image = [UIImage imageNamed:HOMEICON];
@@ -27,12 +32,39 @@ static NSString *sometitle = @"some title";
     [self didChangeSegmentControl:self.segmentedControl];
 }
 
+-(NSMutableDictionary*) jsonData{
+    NSError *error;
+    NSURL *latestEventsURL = [NSURL URLWithString:LATEST_EVENTS_URL];
+    NSString *contents  = [NSString stringWithContentsOfURL:latestEventsURL
+                                                   encoding:NSASCIIStringEncoding
+                                                      error:&error];
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    return(NSMutableDictionary*)[parser objectWithString:contents error:nil];    
+}
+
+-(NSMutableDictionary *) latestEvents {
+    if(!latestEvents){
+        latestEvents = [[self jsonData] objectForKey:EVENTS];
+    }
+    return latestEvents;
+}
+
+-(NSArray*) latestEventDays {
+    if(!latestEventDays) {
+        latestEventDays = [[self.latestEvents allKeys] sortedArrayUsingSelector:@selector(compare:)];
+    }
+    return latestEventDays;
+}
+
 - (void) loadDataWithOperation {
+    [self latestEvents];
+    [self latestEventDays];
     [self performSelectorOnMainThread:@selector(latestEntryTask) withObject:nil waitUntilDone:YES];
 }
 
 - (void) latestEntryTask{
-    self.latestEntriesTableView = [[UITableView alloc] initWithFrame:CGRectMake(14, 50.0, 314.0, 3 * 80.0)];
+    self.latestEntriesTableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 31.0, 300, 270.0)];
+    self.latestEntriesTableView.allowsSelection = NO;
     self.latestEntriesTableView.delegate = self;
     self.latestEntriesTableView.dataSource = self;
     self.latestEntriesTableView.separatorColor = [UIColor blackColor];
@@ -63,9 +95,9 @@ static NSString *sometitle = @"some title";
 
 -(void) addTableView{
     if(!indicator){
-        CGRect progressFrame = CGRectMake(50, 50, 75.0, 75.0);
+        CGRect progressFrame = CGRectMake(120.0, 140.0, 75.0, 75.0);
         indicator = [[UIActivityIndicatorView alloc] initWithFrame:progressFrame];
-        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
     }
     [self.view addSubview:indicator];
     [indicator startAnimating];
@@ -83,20 +115,28 @@ static NSString *sometitle = @"some title";
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return latestEventDays.count;
+}
+
+
+-(NSString*) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return [self.latestEventDays objectAtIndex:section];
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 80.0;
+    return ROW_HEIGHT;
 }
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     [indicator stopAnimating];
-    return 3;
+    return [[self.latestEvents objectForKey:[self.latestEventDays objectAtIndex:section]] count];
 }          
 
+- (NSDictionary *) eventAtIndexPath:(NSIndexPath*) indexPath{
+    NSDictionary *eventsInDay = [self.latestEvents objectForKey:[self.latestEventDays objectAtIndex:indexPath.section]];
+    return eventsInDay;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -106,8 +146,13 @@ static NSString *sometitle = @"some title";
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = sometitle;
-    cell.detailTextLabel.text = sometitle;
+
+    NSDictionary *eventsInDay = [self eventAtIndexPath:indexPath];
+    NSArray *timings = [[eventsInDay allKeys] sortedArrayUsingSelector:@selector(compare:)];
+    NSString *when = [timings objectAtIndex:indexPath.row];
+    NSDictionary *whatAndWhere = [eventsInDay objectForKey:when];    
+    cell.textLabel.text = [whatAndWhere objectForKey:@"what"];
+    cell.detailTextLabel.text = [when stringByAppendingFormat:@", %@",[whatAndWhere objectForKey:@"where"]];
     return cell;
 }
 
