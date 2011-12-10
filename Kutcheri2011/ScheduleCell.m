@@ -72,7 +72,6 @@
     result = [eventStore saveEvent:kutcheriEvent span:EKSpanThisEvent error:&err];
 
     if (result == NO) {
-        NSLog(@"%@ %@",err, [err userInfo]);
         [self showAlert:@"Event not created" message:@"Sorry, event could not be created."];
     }else {
         [self showAlert:@"Event Created" message:@"Event created with reminders 2Hours before, 1Day before."];

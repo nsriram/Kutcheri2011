@@ -309,6 +309,9 @@
                     <navigationItem key="navigationItem" title="Chennai Music Season" id="Tyd-dm-pYk"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackOpaque"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="eRS-7K-bUD" id="J78-qL-kqX"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1146" y="-1106"/>

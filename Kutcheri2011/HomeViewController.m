@@ -88,8 +88,10 @@
     self.latestEntriesTableView.dataSource = self;
     self.latestEntriesTableView.separatorColor = [UIColor lightGrayColor];
     [self.latestEntriesTableView flashScrollIndicators]; 
-    [self.view addSubview:latestEntriesTableView];
-    [self.latestEntriesTableView reloadData];
+    if(self.segmentedControl.selectedSegmentIndex == 1){
+        [self.view addSubview:latestEntriesTableView];
+        [self.latestEntriesTableView reloadData];
+    }
 }
 - (void) loadData {
     NSOperationQueue *queue = [NSOperationQueue new];
@@ -103,7 +105,6 @@
 -(void) removeTableView{
     if(latestEntriesTableView){
         [self.latestEntriesTableView removeFromSuperview];
-        self.latestEntriesTableView=nil;
     }
 }
 
@@ -172,7 +173,7 @@
         cell.detailTextLabel.numberOfLines = 0;
         cell.detailTextLabel.font = [UIFont fontWithName:FONT_NAME size:12.0];
     }
-
+    
     NSDictionary *eventsInDay = [self eventAtIndexPath:indexPath];
     NSArray *timings = [[eventsInDay allKeys] sortedArrayUsingSelector:@selector(compare:)];
     NSString *when = [timings objectAtIndex:indexPath.row];
@@ -211,7 +212,7 @@
 }
 
 - (IBAction)shareOnFacebook:(UIButton *)button{
-        [self.artistShareAppDelegate shareAppOnFB];
+    [self.artistShareAppDelegate shareAppOnFB];
 }
 
 @end
