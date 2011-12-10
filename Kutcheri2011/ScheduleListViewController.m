@@ -12,7 +12,7 @@
 - (void) loadDataWithOperation {
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.separatorColor = [UIColor blackColor];
+    self.tableView.separatorColor = [UIColor lightGrayColor];
     [self.tableView reloadData];
 }
 
@@ -48,6 +48,12 @@
 - (void) setEventURL:(NSString *) newEventURL {
     if(eventURL != newEventURL) {
         eventURL = [newEventURL copy];        
+        if(!indicator){
+            CGRect progressFrame = CGRectMake(50, 50, 75.0, 75.0);
+            self.indicator = [[UIActivityIndicatorView alloc] initWithFrame:progressFrame];
+            indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+            [indicator setHidden:NO];
+        }
         self.view = indicator;
         [indicator startAnimating];
         [self loadData];        
@@ -64,9 +70,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    CGRect progressFrame = CGRectMake(50, 50, 75.0, 75.0);
-    self.indicator = [[UIActivityIndicatorView alloc] initWithFrame:progressFrame];
-    indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
 }
 
 - (void)viewDidUnload
@@ -75,6 +78,7 @@
     eventURL=nil;
     schedules=nil;
     indicator=nil;
+    tableView=nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated

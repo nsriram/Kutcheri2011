@@ -45,6 +45,7 @@
 		C36890CD148B790700633EF8 /* ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C36890CC148B790700633EF8 /* ScheduleCell.m */; };
 		C36890D0148B7BB900633EF8 /* ScheduleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36890CF148B7BB900633EF8 /* ScheduleView.xib */; };
 		C372A2F214854EAE00F136E5 /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C372A2F114854EAE00F136E5 /* ArtistDetailViewController.m */; };
+		C3753BB8149380B5002E23D2 /* home-like.png in Resources */ = {isa = PBXBuildFile; fileRef = C3753BB7149380B5002E23D2 /* home-like.png */; };
 		C391B57F1482CAC600F8E02A /* ArtistListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C391B57E1482CAC600F8E02A /* ArtistListViewController.m */; };
 		C391B59A1482CB5700F8E02A /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = C391B5821482CB5700F8E02A /* NSObject+SBJson.m */; };
 		C391B59B1482CB5700F8E02A /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C391B5851482CB5700F8E02A /* SBJsonParser.m */; };
@@ -122,6 +123,7 @@
 		C36890CF148B7BB900633EF8 /* ScheduleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleView.xib; sourceTree = "<group>"; };
 		C372A2F014854EAE00F136E5 /* ArtistDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
 		C372A2F114854EAE00F136E5 /* ArtistDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
+		C3753BB7149380B5002E23D2 /* home-like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-like.png"; sourceTree = "<group>"; };
 		C391B57D1482CAC600F8E02A /* ArtistListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistListViewController.h; sourceTree = "<group>"; };
 		C391B57E1482CAC600F8E02A /* ArtistListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistListViewController.m; sourceTree = "<group>"; };
 		C391B5811482CB5700F8E02A /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 		C3276BD314829E830039954A /* Kutcheri2011 */ = {
 			isa = PBXGroup;
 			children = (
+				C3753BB7149380B5002E23D2 /* home-like.png */,
 				C3B0FE7D148C044C00BBA20D /* icon.png */,
 				C339227C148F7BBF0094F9E7 /* appicons */,
 				C30BCD5C148F6646008A0CFA /* instruments */,
@@ -430,6 +433,7 @@
 				C30BCD59148F6640008A0CFA /* veena.jpg in Resources */,
 				C30BCD5A148F6640008A0CFA /* violin.jpg in Resources */,
 				C30BCD5B148F6640008A0CFA /* vocal.jpg in Resources */,
+				C3753BB8149380B5002E23D2 /* home-like.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
