@@ -12,7 +12,7 @@
 
 @implementation HomeViewController
 
-@synthesize segmentedControl,image,imageView,latestEntriesTableView,indicator,latestEvents,latestEventDays,lastFetchedDate;
+@synthesize segmentedControl,image,imageView,latestEntriesTableView,indicator,latestEvents,latestEventDays,lastFetchedDate,artistShareAppDelegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -201,6 +201,17 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+-(ArtistShareAppDelegate*) artistShareAppDelegate{
+    if(!artistShareAppDelegate){
+        artistShareAppDelegate = [[ArtistShareAppDelegate alloc]init];
+    }
+    return artistShareAppDelegate;
+}
+
+- (IBAction)shareOnFacebook:(UIButton *)button{
+        [self.artistShareAppDelegate shareAppOnFB];
 }
 
 @end

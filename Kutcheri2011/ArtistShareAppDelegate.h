@@ -6,4 +6,5 @@
 }
 @property (nonatomic, retain) Facebook *facebook;
 -(void) shareOnFB:(NSString*) artistName profileURL:(NSString*) artistURL;
+-(void) shareAppOnFB;
 @end

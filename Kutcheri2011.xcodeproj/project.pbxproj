@@ -11,23 +11,6 @@
 		C30BCCF8148EAA2F008A0CFA /* ArtistShareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C30BCCF7148EAA2F008A0CFA /* ArtistShareAppDelegate.m */; };
 		C30BCD37148F5158008A0CFA /* calendar1-add.png in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD36148F5158008A0CFA /* calendar1-add.png */; };
 		C30BCD39148F5394008A0CFA /* home_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD38148F5394008A0CFA /* home_icon.jpg */; };
-		C30BCD4B148F6640008A0CFA /* chitraveena.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD3A148F6635008A0CFA /* chitraveena.jpg */; };
-		C30BCD4C148F6640008A0CFA /* dholki.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD3B148F6635008A0CFA /* dholki.jpg */; };
-		C30BCD4D148F6640008A0CFA /* flute.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD3C148F6636008A0CFA /* flute.jpg */; };
-		C30BCD4E148F6640008A0CFA /* ghatam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD3D148F6637008A0CFA /* ghatam.jpg */; };
-		C30BCD4F148F6640008A0CFA /* harikatha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD3E148F6637008A0CFA /* harikatha.jpg */; };
-		C30BCD50148F6640008A0CFA /* kanjira.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD3F148F6639008A0CFA /* kanjira.jpg */; };
-		C30BCD51148F6640008A0CFA /* konnakkol.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD40148F6639008A0CFA /* konnakkol.jpg */; };
-		C30BCD52148F6640008A0CFA /* mandolin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD41148F663A008A0CFA /* mandolin.jpg */; };
-		C30BCD53148F6640008A0CFA /* morsing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD42148F663A008A0CFA /* morsing.jpg */; };
-		C30BCD54148F6640008A0CFA /* mridangam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD43148F663B008A0CFA /* mridangam.jpg */; };
-		C30BCD55148F6640008A0CFA /* nadhaswaram.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD44148F663C008A0CFA /* nadhaswaram.jpg */; };
-		C30BCD56148F6640008A0CFA /* pakhawaj.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD45148F663C008A0CFA /* pakhawaj.jpg */; };
-		C30BCD57148F6640008A0CFA /* tabla.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD46148F663D008A0CFA /* tabla.jpg */; };
-		C30BCD58148F6640008A0CFA /* tavil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD47148F663E008A0CFA /* tavil.jpg */; };
-		C30BCD59148F6640008A0CFA /* veena.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD48148F663E008A0CFA /* veena.jpg */; };
-		C30BCD5A148F6640008A0CFA /* violin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD49148F663F008A0CFA /* violin.jpg */; };
-		C30BCD5B148F6640008A0CFA /* vocal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C30BCD4A148F6640008A0CFA /* vocal.jpg */; };
 		C3276BCE14829E830039954A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3276BCD14829E830039954A /* UIKit.framework */; };
 		C3276BD014829E830039954A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3276BCF14829E830039954A /* Foundation.framework */; };
 		C3276BD214829E830039954A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3276BD114829E830039954A /* CoreGraphics.framework */; };
@@ -71,6 +54,23 @@
 		C3B0FE7E148C044C00BBA20D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0FE7D148C044C00BBA20D /* icon.png */; };
 		C3B0FE80148C05DB00BBA20D /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0FE7F148C05DB00BBA20D /* home.png */; };
 		C3B0FE86148C0A0600BBA20D /* trademark.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0FE85148C0A0600BBA20D /* trademark.png */; };
+		C3B59EB61493C4C900C90AE1 /* chitraveena.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EA51493C4C900C90AE1 /* chitraveena.png */; };
+		C3B59EB71493C4C900C90AE1 /* dholki.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EA61493C4C900C90AE1 /* dholki.png */; };
+		C3B59EB81493C4C900C90AE1 /* flute.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EA71493C4C900C90AE1 /* flute.png */; };
+		C3B59EB91493C4C900C90AE1 /* ghatam.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EA81493C4C900C90AE1 /* ghatam.png */; };
+		C3B59EBA1493C4C900C90AE1 /* harikatha.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EA91493C4C900C90AE1 /* harikatha.png */; };
+		C3B59EBB1493C4C900C90AE1 /* kanjira.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EAA1493C4C900C90AE1 /* kanjira.png */; };
+		C3B59EBC1493C4C900C90AE1 /* konnakkol.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EAB1493C4C900C90AE1 /* konnakkol.png */; };
+		C3B59EBD1493C4C900C90AE1 /* mandolin.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EAC1493C4C900C90AE1 /* mandolin.png */; };
+		C3B59EBE1493C4C900C90AE1 /* morsing.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EAD1493C4C900C90AE1 /* morsing.png */; };
+		C3B59EBF1493C4C900C90AE1 /* mridangam.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EAE1493C4C900C90AE1 /* mridangam.png */; };
+		C3B59EC01493C4C900C90AE1 /* nadhaswaram.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EAF1493C4C900C90AE1 /* nadhaswaram.png */; };
+		C3B59EC11493C4C900C90AE1 /* pakhawaj.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EB01493C4C900C90AE1 /* pakhawaj.png */; };
+		C3B59EC21493C4C900C90AE1 /* tabla.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EB11493C4C900C90AE1 /* tabla.png */; };
+		C3B59EC31493C4C900C90AE1 /* tavil.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EB21493C4C900C90AE1 /* tavil.png */; };
+		C3B59EC41493C4C900C90AE1 /* veena.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EB31493C4C900C90AE1 /* veena.png */; };
+		C3B59EC51493C4C900C90AE1 /* violin.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EB41493C4C900C90AE1 /* violin.png */; };
+		C3B59EC61493C4C900C90AE1 /* vocal.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B59EB51493C4C900C90AE1 /* vocal.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,23 +79,6 @@
 		C30BCCF7148EAA2F008A0CFA /* ArtistShareAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistShareAppDelegate.m; sourceTree = "<group>"; };
 		C30BCD36148F5158008A0CFA /* calendar1-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar1-add.png"; sourceTree = "<group>"; };
 		C30BCD38148F5394008A0CFA /* home_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home_icon.jpg; sourceTree = "<group>"; };
-		C30BCD3A148F6635008A0CFA /* chitraveena.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chitraveena.jpg; sourceTree = "<group>"; };
-		C30BCD3B148F6635008A0CFA /* dholki.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dholki.jpg; sourceTree = "<group>"; };
-		C30BCD3C148F6636008A0CFA /* flute.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flute.jpg; sourceTree = "<group>"; };
-		C30BCD3D148F6637008A0CFA /* ghatam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ghatam.jpg; sourceTree = "<group>"; };
-		C30BCD3E148F6637008A0CFA /* harikatha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = harikatha.jpg; sourceTree = "<group>"; };
-		C30BCD3F148F6639008A0CFA /* kanjira.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kanjira.jpg; sourceTree = "<group>"; };
-		C30BCD40148F6639008A0CFA /* konnakkol.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = konnakkol.jpg; sourceTree = "<group>"; };
-		C30BCD41148F663A008A0CFA /* mandolin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mandolin.jpg; sourceTree = "<group>"; };
-		C30BCD42148F663A008A0CFA /* morsing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = morsing.jpg; sourceTree = "<group>"; };
-		C30BCD43148F663B008A0CFA /* mridangam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mridangam.jpg; sourceTree = "<group>"; };
-		C30BCD44148F663C008A0CFA /* nadhaswaram.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nadhaswaram.jpg; sourceTree = "<group>"; };
-		C30BCD45148F663C008A0CFA /* pakhawaj.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pakhawaj.jpg; sourceTree = "<group>"; };
-		C30BCD46148F663D008A0CFA /* tabla.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tabla.jpg; sourceTree = "<group>"; };
-		C30BCD47148F663E008A0CFA /* tavil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tavil.jpg; sourceTree = "<group>"; };
-		C30BCD48148F663E008A0CFA /* veena.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = veena.jpg; sourceTree = "<group>"; };
-		C30BCD49148F663F008A0CFA /* violin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = violin.jpg; sourceTree = "<group>"; };
-		C30BCD4A148F6640008A0CFA /* vocal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vocal.jpg; sourceTree = "<group>"; };
 		C3276BC914829E830039954A /* Kutcheri2011.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kutcheri2011.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3276BCD14829E830039954A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3276BCF14829E830039954A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -168,6 +151,23 @@
 		C3B0FE7D148C044C00BBA20D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		C3B0FE7F148C05DB00BBA20D /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		C3B0FE85148C0A0600BBA20D /* trademark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trademark.png; sourceTree = "<group>"; };
+		C3B59EA51493C4C900C90AE1 /* chitraveena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chitraveena.png; path = ../chitraveena.png; sourceTree = "<group>"; };
+		C3B59EA61493C4C900C90AE1 /* dholki.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dholki.png; path = ../dholki.png; sourceTree = "<group>"; };
+		C3B59EA71493C4C900C90AE1 /* flute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flute.png; path = ../flute.png; sourceTree = "<group>"; };
+		C3B59EA81493C4C900C90AE1 /* ghatam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ghatam.png; path = ../ghatam.png; sourceTree = "<group>"; };
+		C3B59EA91493C4C900C90AE1 /* harikatha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = harikatha.png; path = ../harikatha.png; sourceTree = "<group>"; };
+		C3B59EAA1493C4C900C90AE1 /* kanjira.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kanjira.png; path = ../kanjira.png; sourceTree = "<group>"; };
+		C3B59EAB1493C4C900C90AE1 /* konnakkol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = konnakkol.png; path = ../konnakkol.png; sourceTree = "<group>"; };
+		C3B59EAC1493C4C900C90AE1 /* mandolin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mandolin.png; path = ../mandolin.png; sourceTree = "<group>"; };
+		C3B59EAD1493C4C900C90AE1 /* morsing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = morsing.png; path = ../morsing.png; sourceTree = "<group>"; };
+		C3B59EAE1493C4C900C90AE1 /* mridangam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mridangam.png; path = ../mridangam.png; sourceTree = "<group>"; };
+		C3B59EAF1493C4C900C90AE1 /* nadhaswaram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nadhaswaram.png; path = ../nadhaswaram.png; sourceTree = "<group>"; };
+		C3B59EB01493C4C900C90AE1 /* pakhawaj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pakhawaj.png; path = ../pakhawaj.png; sourceTree = "<group>"; };
+		C3B59EB11493C4C900C90AE1 /* tabla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabla.png; path = ../tabla.png; sourceTree = "<group>"; };
+		C3B59EB21493C4C900C90AE1 /* tavil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tavil.png; path = ../tavil.png; sourceTree = "<group>"; };
+		C3B59EB31493C4C900C90AE1 /* veena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = veena.png; path = ../veena.png; sourceTree = "<group>"; };
+		C3B59EB41493C4C900C90AE1 /* violin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = violin.png; path = ../violin.png; sourceTree = "<group>"; };
+		C3B59EB51493C4C900C90AE1 /* vocal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vocal.png; path = ../vocal.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,30 +185,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C30BCD5C148F6646008A0CFA /* instruments */ = {
-			isa = PBXGroup;
-			children = (
-				C30BCD41148F663A008A0CFA /* mandolin.jpg */,
-				C30BCD42148F663A008A0CFA /* morsing.jpg */,
-				C30BCD40148F6639008A0CFA /* konnakkol.jpg */,
-				C30BCD3F148F6639008A0CFA /* kanjira.jpg */,
-				C30BCD3E148F6637008A0CFA /* harikatha.jpg */,
-				C30BCD3D148F6637008A0CFA /* ghatam.jpg */,
-				C30BCD3C148F6636008A0CFA /* flute.jpg */,
-				C30BCD3B148F6635008A0CFA /* dholki.jpg */,
-				C30BCD45148F663C008A0CFA /* pakhawaj.jpg */,
-				C30BCD44148F663C008A0CFA /* nadhaswaram.jpg */,
-				C30BCD47148F663E008A0CFA /* tavil.jpg */,
-				C30BCD48148F663E008A0CFA /* veena.jpg */,
-				C30BCD43148F663B008A0CFA /* mridangam.jpg */,
-				C30BCD4A148F6640008A0CFA /* vocal.jpg */,
-				C30BCD49148F663F008A0CFA /* violin.jpg */,
-				C30BCD46148F663D008A0CFA /* tabla.jpg */,
-				C30BCD3A148F6635008A0CFA /* chitraveena.jpg */,
-			);
-			name = instruments;
-			sourceTree = "<group>";
-		};
 		C317C77E148E9AA400C38537 /* facebook */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,10 +233,26 @@
 		C3276BD314829E830039954A /* Kutcheri2011 */ = {
 			isa = PBXGroup;
 			children = (
+				C3B59EA51493C4C900C90AE1 /* chitraveena.png */,
+				C3B59EA61493C4C900C90AE1 /* dholki.png */,
+				C3B59EA71493C4C900C90AE1 /* flute.png */,
+				C3B59EA81493C4C900C90AE1 /* ghatam.png */,
+				C3B59EA91493C4C900C90AE1 /* harikatha.png */,
+				C3B59EAA1493C4C900C90AE1 /* kanjira.png */,
+				C3B59EAB1493C4C900C90AE1 /* konnakkol.png */,
+				C3B59EAC1493C4C900C90AE1 /* mandolin.png */,
+				C3B59EAD1493C4C900C90AE1 /* morsing.png */,
+				C3B59EAE1493C4C900C90AE1 /* mridangam.png */,
+				C3B59EAF1493C4C900C90AE1 /* nadhaswaram.png */,
+				C3B59EB01493C4C900C90AE1 /* pakhawaj.png */,
+				C3B59EB11493C4C900C90AE1 /* tabla.png */,
+				C3B59EB21493C4C900C90AE1 /* tavil.png */,
+				C3B59EB31493C4C900C90AE1 /* veena.png */,
+				C3B59EB41493C4C900C90AE1 /* violin.png */,
+				C3B59EB51493C4C900C90AE1 /* vocal.png */,
 				C34D646F1493B9CD0091449B /* FB_Like.png */,
 				C3B0FE7D148C044C00BBA20D /* icon.png */,
 				C339227C148F7BBF0094F9E7 /* appicons */,
-				C30BCD5C148F6646008A0CFA /* instruments */,
 				C317C77E148E9AA400C38537 /* facebook */,
 				C34C17C614841DC1000A6744 /* json-framework */,
 				C3276BD414829E830039954A /* Supporting Files */,
@@ -416,24 +408,24 @@
 				C39B4412148E96AE0049FBB1 /* FBDialog.bundle in Resources */,
 				C30BCD37148F5158008A0CFA /* calendar1-add.png in Resources */,
 				C30BCD39148F5394008A0CFA /* home_icon.jpg in Resources */,
-				C30BCD4B148F6640008A0CFA /* chitraveena.jpg in Resources */,
-				C30BCD4C148F6640008A0CFA /* dholki.jpg in Resources */,
-				C30BCD4D148F6640008A0CFA /* flute.jpg in Resources */,
-				C30BCD4E148F6640008A0CFA /* ghatam.jpg in Resources */,
-				C30BCD4F148F6640008A0CFA /* harikatha.jpg in Resources */,
-				C30BCD50148F6640008A0CFA /* kanjira.jpg in Resources */,
-				C30BCD51148F6640008A0CFA /* konnakkol.jpg in Resources */,
-				C30BCD52148F6640008A0CFA /* mandolin.jpg in Resources */,
-				C30BCD53148F6640008A0CFA /* morsing.jpg in Resources */,
-				C30BCD54148F6640008A0CFA /* mridangam.jpg in Resources */,
-				C30BCD55148F6640008A0CFA /* nadhaswaram.jpg in Resources */,
-				C30BCD56148F6640008A0CFA /* pakhawaj.jpg in Resources */,
-				C30BCD57148F6640008A0CFA /* tabla.jpg in Resources */,
-				C30BCD58148F6640008A0CFA /* tavil.jpg in Resources */,
-				C30BCD59148F6640008A0CFA /* veena.jpg in Resources */,
-				C30BCD5A148F6640008A0CFA /* violin.jpg in Resources */,
-				C30BCD5B148F6640008A0CFA /* vocal.jpg in Resources */,
 				C34D64701493B9CD0091449B /* FB_Like.png in Resources */,
+				C3B59EB61493C4C900C90AE1 /* chitraveena.png in Resources */,
+				C3B59EB71493C4C900C90AE1 /* dholki.png in Resources */,
+				C3B59EB81493C4C900C90AE1 /* flute.png in Resources */,
+				C3B59EB91493C4C900C90AE1 /* ghatam.png in Resources */,
+				C3B59EBA1493C4C900C90AE1 /* harikatha.png in Resources */,
+				C3B59EBB1493C4C900C90AE1 /* kanjira.png in Resources */,
+				C3B59EBC1493C4C900C90AE1 /* konnakkol.png in Resources */,
+				C3B59EBD1493C4C900C90AE1 /* mandolin.png in Resources */,
+				C3B59EBE1493C4C900C90AE1 /* morsing.png in Resources */,
+				C3B59EBF1493C4C900C90AE1 /* mridangam.png in Resources */,
+				C3B59EC01493C4C900C90AE1 /* nadhaswaram.png in Resources */,
+				C3B59EC11493C4C900C90AE1 /* pakhawaj.png in Resources */,
+				C3B59EC21493C4C900C90AE1 /* tabla.png in Resources */,
+				C3B59EC31493C4C900C90AE1 /* tavil.png in Resources */,
+				C3B59EC41493C4C900C90AE1 /* veena.png in Resources */,
+				C3B59EC51493C4C900C90AE1 /* violin.png in Resources */,
+				C3B59EC61493C4C900C90AE1 /* vocal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
