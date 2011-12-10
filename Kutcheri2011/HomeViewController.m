@@ -3,7 +3,7 @@
 
 #define HOMEICON @"home_icon.jpg"
 #define EVENTS @"events"
-#define ROW_HEIGHT 40
+#define ROW_HEIGHT 50
 
 @implementation HomeViewController
 
@@ -63,11 +63,12 @@ static NSString *LATEST_EVENTS_URL = @"http://www.ilovemadras.com/api/get_upcomi
 }
 
 - (void) latestEntryTask{
-    self.latestEntriesTableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 31.0, 300, 270.0)];
+    self.latestEntriesTableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 36.0, 300, 270.0)];
     self.latestEntriesTableView.allowsSelection = NO;
     self.latestEntriesTableView.delegate = self;
     self.latestEntriesTableView.dataSource = self;
     self.latestEntriesTableView.separatorColor = [UIColor blackColor];
+    [self.latestEntriesTableView flashScrollIndicators]; 
     [self.view addSubview:latestEntriesTableView];
     [self.latestEntriesTableView reloadData];
 }
@@ -145,6 +146,10 @@ static NSString *LATEST_EVENTS_URL = @"http://www.ilovemadras.com/api/get_upcomi
     UITableViewCell *cell = [self.latestEntriesTableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+        cell.textLabel.numberOfLines = 0;
+        cell.textLabel.font = [UIFont fontWithName:@"Arial" size:13.0];
+        cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size:12.0];
     }
 
     NSDictionary *eventsInDay = [self eventAtIndexPath:indexPath];
