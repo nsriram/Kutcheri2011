@@ -496,8 +496,8 @@
 					armv6,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sriram Narasimhan (C8K6T8MPFA)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sriram Narasimhan (C8K6T8MPFA)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sriram Narasimhan";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sriram Narasimhan";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -512,8 +512,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PROVISIONING_PROFILE = "6335141A-EE38-4DD0-8F92-5EB2268E34E5";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6335141A-EE38-4DD0-8F92-5EB2268E34E5";
+				PROVISIONING_PROFILE = "9BD88446-BEC9-41A5-BAAC-C010096F8A0C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9BD88446-BEC9-41A5-BAAC-C010096F8A0C";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -528,8 +528,8 @@
 					armv6,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sriram Narasimhan (C8K6T8MPFA)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sriram Narasimhan (C8K6T8MPFA)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sriram Narasimhan";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sriram Narasimhan";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -538,8 +538,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "6335141A-EE38-4DD0-8F92-5EB2268E34E5";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6335141A-EE38-4DD0-8F92-5EB2268E34E5";
+				PROVISIONING_PROFILE = "9BD88446-BEC9-41A5-BAAC-C010096F8A0C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9BD88446-BEC9-41A5-BAAC-C010096F8A0C";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
