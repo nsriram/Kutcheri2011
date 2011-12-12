@@ -2,6 +2,7 @@
 #import "SBJson.h"
 #import "ScheduleListViewController.h"
 
+#define BASE_URL @"http://www.ilovemadras.com/api/get_events_by_sabha/?count=300&id="
 @interface SabhaListViewController()
 @property (nonatomic,retain) NSArray *sabhas;
 @property (nonatomic,retain) NSString *section;
@@ -130,9 +131,12 @@
     NSDictionary *sabha = [self sabhaAtIndexPath:indexPath];
     NSString *sabhaID = (NSString *)[sabha objectForKey:@"id"];
     [self.navigationController pushViewController:self.scheduleListViewController animated:YES];
-    NSString *baseURL = @"http://www.ilovemadras.com/api/get_events_by_sabha/?count=300&id=";
-    self.scheduleListViewController.schedules=nil;
-    [self.scheduleListViewController setEventURL:[baseURL stringByAppendingFormat:@"%@",sabhaID]];
+    NSString *newURL = [BASE_URL stringByAppendingFormat:@"%@",sabhaID];
+    NSString *currentURL = [scheduleListViewController eventURL];
+    if(!currentURL || ![newURL isEqualToString:[scheduleListViewController eventURL]]){
+        self.scheduleListViewController.schedules=nil;        
+    }
+    [self.scheduleListViewController setEventURL:newURL];
 }
 
 @end

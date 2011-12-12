@@ -145,8 +145,12 @@
     NSDictionary *instrument = [self instrumentAtIndexPath:indexPath];
     NSString *instrumentID = (NSString *)[instrument objectForKey:@"id"];
     [self.navigationController pushViewController:self.scheduleListViewController animated:YES];
-    self.scheduleListViewController.schedules=nil;
-    [self.scheduleListViewController setEventURL:[BASE_URL stringByAppendingFormat:@"%@",instrumentID]];
+    NSString *newURL = [BASE_URL stringByAppendingFormat:@"%@",instrumentID];
+    NSString *currentURL = [scheduleListViewController eventURL];
+    if(!currentURL || ![newURL isEqualToString:[scheduleListViewController eventURL]]){
+        self.scheduleListViewController.schedules=nil;        
+    }
+    [self.scheduleListViewController setEventURL:newURL];
 }
 
 @end
