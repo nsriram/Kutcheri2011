@@ -104,10 +104,13 @@
     artistDetail.frame = frame;    
     [artistScheduleTableView removeFromSuperview];
     
-    artistScheduleTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, frame.size.height+8.0, 314.0, schedules.count * 141.0)];
+    artistScheduleTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, frame.size.height+8.0, 314.0, 372.0 - frame.size.height+8.0)];
     artistScheduleTableView.separatorColor = [UIColor whiteColor];
     artistScheduleTableView.dataSource=self;
-    artistScheduleTableView.delegate=self;
+    artistScheduleTableView.delegate=self; 
+    artistScheduleTableView.allowsSelection=NO;
+
+    [artistScheduleTableView flashScrollIndicators];     
     [artistScheduleTableView reloadData];
     
     [indicator stopAnimating];
@@ -206,6 +209,10 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+}
+
+-(NSString*) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return @"Performances (scroll for more)";
 }
 
 -(IBAction)shareOnFB {
