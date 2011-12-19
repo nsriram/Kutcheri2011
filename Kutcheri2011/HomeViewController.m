@@ -3,7 +3,7 @@
 
 #define HOMEICON @"home_icon.jpg"
 #define EVENTS @"events"
-#define ROW_HEIGHT 48
+#define ROW_HEIGHT 62
 #define DAY_IN_SECONDS 86400.0
 #define FONT_NAME @"Helvetica"
 #define WHERE @"where"
@@ -194,7 +194,7 @@
         cell.textLabel.font = [UIFont fontWithName:FONT_NAME size:13.0];
         cell.detailTextLabel.lineBreakMode = UILineBreakModeWordWrap;
         cell.detailTextLabel.numberOfLines = 0;
-        cell.detailTextLabel.font = [UIFont fontWithName:FONT_NAME size:12.0];
+        cell.detailTextLabel.font = [UIFont fontWithName:FONT_NAME size:11.0];
     }
     
     NSDictionary *eventsInDay = [self eventAtIndexPath:indexPath];
