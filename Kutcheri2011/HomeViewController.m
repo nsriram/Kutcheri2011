@@ -191,10 +191,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
         cell.textLabel.numberOfLines = 0;
-        cell.textLabel.font = [UIFont fontWithName:FONT_NAME size:13.0];
+        cell.textLabel.font = [UIFont boldSystemFontOfSize:13.0];
         cell.detailTextLabel.lineBreakMode = UILineBreakModeWordWrap;
         cell.detailTextLabel.numberOfLines = 0;
-        cell.detailTextLabel.font = [UIFont fontWithName:FONT_NAME size:11.0];
+        cell.detailTextLabel.font = [UIFont systemFontOfSize:11.0];
     }
     
     NSDictionary *eventsInDay = [self eventAtIndexPath:indexPath];
