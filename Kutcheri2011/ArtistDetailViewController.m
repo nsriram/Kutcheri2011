@@ -212,7 +212,7 @@
 }
 
 -(NSString*) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    return @"Performances (scroll for more)";
+    return @"Performances";
 }
 
 -(IBAction)shareOnFB {
