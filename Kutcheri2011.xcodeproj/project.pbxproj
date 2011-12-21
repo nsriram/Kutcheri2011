@@ -45,6 +45,7 @@
 		C3946B0614A107FC00EB4891 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3946B0514A107FB00EB4891 /* CalendarViewController.m */; };
 		C3946B0C14A10B4B00EB4891 /* alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = C3946B0B14A10B4B00EB4891 /* alarm.png */; };
 		C3946B1014A10C5300EB4891 /* allevents.json in Resources */ = {isa = PBXBuildFile; fileRef = C3946B0F14A10C5300EB4891 /* allevents.json */; };
+		C3946B1314A1C01600EB4891 /* DateEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3946B1214A1C01600EB4891 /* DateEventsViewController.m */; };
 		C39B4405148E78BA0049FBB1 /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = C39B4404148E78BA0049FBB1 /* like.png */; };
 		C39B4411148E96AE0049FBB1 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = C39B4408148E96AE0049FBB1 /* Facebook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C39B4412148E96AE0049FBB1 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C39B440A148E96AE0049FBB1 /* FBDialog.bundle */; };
@@ -141,6 +142,8 @@
 		C3946B0514A107FB00EB4891 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		C3946B0B14A10B4B00EB4891 /* alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm.png; sourceTree = "<group>"; };
 		C3946B0F14A10C5300EB4891 /* allevents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = allevents.json; sourceTree = "<group>"; };
+		C3946B1114A1C01500EB4891 /* DateEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateEventsViewController.h; sourceTree = "<group>"; };
+		C3946B1214A1C01600EB4891 /* DateEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateEventsViewController.m; sourceTree = "<group>"; };
 		C39B4404148E78BA0049FBB1 /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
 		C39B4407148E96AE0049FBB1 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
 		C39B4408148E96AE0049FBB1 /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
@@ -267,6 +270,8 @@
 				C34E65D91492744300828D12 /* HomeViewController.m */,
 				C3946B0414A107FB00EB4891 /* CalendarViewController.h */,
 				C3946B0514A107FB00EB4891 /* CalendarViewController.m */,
+				C3946B1114A1C01500EB4891 /* DateEventsViewController.h */,
+				C3946B1214A1C01600EB4891 /* DateEventsViewController.m */,
 			);
 			path = Kutcheri2011;
 			sourceTree = "<group>";
@@ -484,6 +489,7 @@
 				C30BCCF8148EAA2F008A0CFA /* ArtistShareAppDelegate.m in Sources */,
 				C34E65DA1492744300828D12 /* HomeViewController.m in Sources */,
 				C3946B0614A107FC00EB4891 /* CalendarViewController.m in Sources */,
+				C3946B1314A1C01600EB4891 /* DateEventsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,13 +1,28 @@
 #import "CalendarViewController.h"
 
 @implementation CalendarViewController
+@synthesize dateEventsViewController;
+
+-(DateEventsViewController *) dateEventsViewController {
+    if(!dateEventsViewController){
+        self.dateEventsViewController = 
+        [self.storyboard instantiateViewControllerWithIdentifier:@"DateEventsView"];
+    }
+    return dateEventsViewController;
+}
 
 -(IBAction) daySelected:(UIButton *)button{
-    NSLog(@"December %@, 2011",button.titleLabel.text);
+    NSString *eventDate = @"December";
+    eventDate = [eventDate stringByAppendingFormat:@" %@, 2011",button.titleLabel.text];
+    [self.navigationController pushViewController:self.dateEventsViewController animated:YES];
+    [self.dateEventsViewController setEventDate:eventDate];
 }
 
 -(IBAction) janDaySelected:(UIButton *)button{
-    NSLog(@"January %@, 2012",button.titleLabel.text);    
+    NSString *eventDate = @"January";
+    eventDate = [eventDate stringByAppendingFormat:@" %@, 2012",button.titleLabel.text];
+    [self.navigationController pushViewController:self.dateEventsViewController animated:YES];
+    [self.dateEventsViewController setEventDate:eventDate];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
