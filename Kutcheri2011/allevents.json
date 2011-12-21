@@ -16,7 +16,7 @@
             "6:30 pm - 7:30 pm": [
                                   [
                                    "Saraswati Vidyardhi - Vocal, M.Narmadha - Violin, Mudhra Bhaskar - Mridangam, Madipakkam Murali - Ghatam",
-                                   " Infosys Hall, Ramakrishna Mission School Campus, Krishna St, T Nagar,Chennai,Tamil Nadu, India"
+                                   "Infosys Hall, Ramakrishna Mission School Campus, Krishna St, T Nagar,Chennai,Tamil Nadu, India"
                                    ]
                                   ],
             "7:00 pm - 9:30 pm": [
@@ -428,7 +428,7 @@
                                    ],
                                   [
                                    "Inauguration and Presentation of Sangeetha Mamani award to Nithyasree Mahadevan",
-                                   " Padma Seshadri School Auditorium, Alagirisamy Salai, K K Nagar,Chennai,Tamil Nadu, India"
+                                   "Padma Seshadri School Auditorium, Alagirisamy Salai, K K Nagar,Chennai,Tamil Nadu, India"
                                    ]
                                   ],
             "6:00 pm - 9:30 pm": [
@@ -1107,6 +1107,18 @@
                                    ]
         },
         "January 1, 2012": {
+            "9:00 am": [
+                        [
+                         "S. Shashank (Flute) B.U. Ganesh Prasad (Violin) Patri Satishkumar (Mridangam) Tripunithura N. Radhakrishnan (Ghatam)",
+                         "Infosys Hall, Ramakrishna Mission School Campus, Krishna St, T Nagar,Chennai,Tamil Nadu, India"
+                         ]
+                        ],
+            "9:15 am - 11:45 am": [
+                                   [
+                                    "Lecture on ‘Raga Anubhavam’ by Nedanuri Krishnamurthy, Malladi Brothers(Vocal Support), Sriram Parasuram(Violin)",
+                                    " T.T. Krishnamachari Auditorium, The Music Academy, T.T. Krishnamachari Rd, Chennai,Tamil Nadu, India"
+                                    ]
+                                   ],
             "3:45 pm - 4:45 pm": [
                                   [
                                    "MANGALA ISAI Nadaswaram Kancheepuram M.K. Pazhani & G. Vinodkumar Chennai",
@@ -1115,46 +1127,82 @@
                                   ],
             "5:00 pm - 9:30 pm": [
                                   [
-                                   "Ghatam Dr. S Karthick's SUMS(K)RHYTHM",
+                                   "Evergreen Melodies of PBS and A.M.Raja Hits by Ganapathy’s SANGEETH LAHARI Orchestra",
                                    " T.T. Krishnamachari Auditorium, The Music Academy, T.T. Krishnamachari Rd, Chennai,Tamil Nadu, India"
                                    ]
                                   ],
-            "9:15 am - 11:45 am": [
-                                   [
-                                    "S. Shashank (Flute) B.U. Ganesh Prasad (Violin) Patri Satishkumar (Mridangam) Tripunithura N. Radhakrishnan (Ghatam)",
-                                    " T.T. Krishnamachari Auditorium, The Music Academy, T.T. Krishnamachari Rd, Chennai,Tamil Nadu, India"
-                                    ]
-                                   ]
+            "5:00 pm": [
+                        [
+                         "Chandrika Srinivas - Vocal, K.J. Dilip - Violin, Mannargudi N. Subramanian - Mrudangam",
+                         "Padma Seshadri School Auditorium, Alagirisamy Salai, K K Nagar,Chennai,Tamil Nadu, India"
+                         ]
+                        ],
+            "6:15 pm": [
+                        [
+                         "Ghatam Dr. S Karthick's SUMS(K)RHYTHM",
+                         "Infosys Hall, Ramakrishna Mission School Campus, Krishna St, T Nagar,Chennai,Tamil Nadu, India"
+                         ]
+                        ],
+            "7:00 pm": [
+                        [
+                         "Mahathi - Vocal, Melakaveri Thgygarajan - Violin, M.S.Varadhan - Mridangam, Anirudh Athreya - Kanjeera",
+                         "Padma Seshadri School Auditorium, Alagirisamy Salai, K K Nagar,Chennai,Tamil Nadu, India"
+                         ]
+                        ]
         },
         "January 2, 2012": {
             "4:00 pm": [
-                                  [
-                                   "Gayathri Girish (Vocal)",
-                                   "Bharat Kalachar, Thirumalai Pillai Rd, Chennai,Tamil Nadu, India"
-                                   ]
-                                  ]
+                        [
+                         "Gayathri Girish (Vocal)",
+                         "Bharat Kalachar, Thirumalai Pillai Rd, Chennai,Tamil Nadu, India"
+                         ]
+                        ],
+            "5:00 pm": [
+                        [
+                         "Prapanjam Shyendran - Guitar, Prapanjam Surendran - Mridangam, Papanasam Sethuraman - Kanjeera",
+                         "Padma Seshadri School Auditorium, Alagirisamy Salai, K K Nagar,Chennai,Tamil Nadu, India"
+                         ]
+                        ],
+            "6:15 pm": [
+                        [
+                         "Shree Thiagaraja Pancharathnam Sruti 5 – Rendering of Pancharatha Kritis by 60 Women Artists",
+                         "Infosys Hall, Ramakrishna Mission School Campus, Krishna St, T Nagar,Chennai,Tamil Nadu, India"
+                         ]
+                        ],
+            "7:00 pm": [
+                        [
+                         "K.R. SARANATHAN - Vocal, V.L.Kumar - Violin, Prapanjam Ravindran - Mridangam, Papanasam Sethuraman - Kanjeera",
+                         "Padma Seshadri School Auditorium, Alagirisamy Salai, K K Nagar,Chennai,Tamil Nadu, India"
+                         ]
+                        ]
         },
         "January 3, 2012": {
             "4:00 pm": [
-                                  [
-                                   "Dr. M. Lalitha, Violin with Suman Bhattacharya, Sitar, Rishab Dhar - Pakhawaj",
-                                   "Bharat Kalachar, Thirumalai Pillai Rd, Chennai,Tamil Nadu, India"
-                                   ]
-                                  ],
+                        [
+                         "Dr. M. Lalitha, Violin with Suman Bhattacharya, Sitar, Rishab Dhar - Pakhawaj",
+                         "Bharat Kalachar, Thirumalai Pillai Rd, Chennai,Tamil Nadu, India"
+                         ]
+                        ],
             "7:15 pm": [
                         [
                          "Vidya Subramaniam (USA) - Bharatanatyam",
                          "Bharat Kalachar, Thirumalai Pillai Rd, Chennai,Tamil Nadu, India"
                          ]
+                        ],
+            "7:00 pm": [
+                        [
+                         "Nithyasri Mahadevan - Vocal, Usha Rajagopalan - Violin, I. Sivakumar - Mridangam",
+                         "Padma Seshadri School Auditorium, Alagirisamy Salai, K K Nagar,Chennai,Tamil Nadu, India"
+                         ]
                         ]
         },
         "January 4, 2012": {
             "5:00 pm": [
-                                  [
-                                   "Shantarati - Bharatanatyam",
-                                   "Bharat Kalachar, Thirumalai Pillai Rd, Chennai,Tamil Nadu, India"
-                                   ]
-                                  ],
+                        [
+                         "Shantarati - Bharatanatyam",
+                         "Bharat Kalachar, Thirumalai Pillai Rd, Chennai,Tamil Nadu, India"
+                         ]
+                        ],
             "6:45 pm": [
                         [
                          "U.A.A. presents 'Naadagam' - play in Tamil",

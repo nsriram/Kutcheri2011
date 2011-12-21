@@ -686,7 +686,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Music Calendar" id="UTt-JK-En4"/>
+                    <navigationItem key="navigationItem" title="Calendar" id="UTt-JK-En4"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1226" y="1384"/>

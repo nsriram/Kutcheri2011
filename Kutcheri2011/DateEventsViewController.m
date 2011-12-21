@@ -10,6 +10,7 @@
 }
 - (void) setEventDate:(NSString *) newEventDate {
     eventDate = newEventDate;
+    self.title = eventDate;
     [eventDateTable reloadData];
 }
 
